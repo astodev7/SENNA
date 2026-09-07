@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard — AURELIA Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/admin/admin.css">
+  <script src="js/theme.js"></script>
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="admin-sidebar" id="sidebar">
+      <div class="admin-brand">AURELIA</div>
+      <nav>
+        <a href="admin/" class="is-active">Dashboard</a>
+        <a href="admin/leads.html">Leads</a>
+        <a href="admin/projects.html">Projetos</a>
+        <a href="admin/plans.html">Planos</a>
+        <a href="admin/faq.html">FAQ</a>
+        <a href="admin/settings.html">Configurações</a>
+      </nav>
+      <button type="button" class="admin-logout" id="logout">Sair</button>
+    </aside>
+    <div class="admin-main">
+      <header class="admin-top">
+        <h1>Dashboard</h1>
+        <span id="user-name" class="admin-user"></span>
+      </header>
+      <div id="content"><div class="loading">Carregando…</div></div>
+    </div>
+  </div>
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/admin/auth-guard.js"></script>
+  <script>
+    (async function () {
+      try {
+        const me = await AURELIA.api.get('/admin/auth/me');
+        document.getElementById('user-name').textContent = me.data.user.name || me.data.user.email;
+      } catch {
+        location.href = '/admin/login.html';
+        return;
+      }
+      try {
+        const res = await AURELIA.api.get('/admin/dashboard');
+        const d = res.data;
+        document.getElementById('content').innerHTML = `
+          <div class="admin-stats">
+            <div class="stat"><span class="stat-n">${d.leads_total}</span><span class="stat-l">Leads</span></div>
+            <div class="stat"><span class="stat-n">${d.leads_new}</span><span class="stat-l">Novos</span></div>
+            <div class="stat"><span class="stat-n">${d.projects_published}</span><span class="stat-l">Projetos publicados</span></div>
+            <div class="stat"><span class="stat-n">${d.projects_featured}</span><span class="stat-l">Em destaque</span></div>
+            <div class="stat"><span class="stat-n">${d.plans_active}</span><span class="stat-l">Planos ativos</span></div>
+          </div>
+          <div class="admin-grid-2">
+            <div>
+              <h2>Leads recentes</h2>
+              <table class="admin-table">
+                <thead><tr><th>Nome</th><th>Status</th><th>Data</th></tr></thead>
+                <tbody>
+                  ${(d.recent_leads || []).map((l) => `
+                    <tr><td>${l.name}</td><td>${l.status}</td><td>${new Date(l.created_at).toLocaleDateString('pt-BR')}</td></tr>
+                  `).join('') || '<tr><td colspan="3">Nenhum lead</td></tr>'}
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h2>Atividade</h2>
+              <ul class="activity-list">
+                ${(d.recent_activity || []).map((a) => `
+                  <li><strong>${a.action}</strong> ${a.entity_type || ''} — ${a.user_name || 'sistema'} <span>${new Date(a.created_at).toLocaleString('pt-BR')}</span></li>
+                `).join('') || '<li>Nenhuma atividade</li>'}
+              </ul>
+            </div>
+          </div>
+        `;
+      } catch (e) {
+        document.getElementById('content').innerHTML = '<div class="empty-state">Erro ao carregar dashboard.</div>';
+      }
+      document.getElementById('logout').addEventListener('click', async () => {
+        try { await AURELIA.api.post('/admin/auth/logout'); } catch (_) {}
+        location.href = '/admin/login.html';
+      });
+    })();
+  </script>
+</body>
+</html>

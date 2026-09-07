@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projetos — AURELIA Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/admin/admin.css">
+  <script src="/js/theme.js"></script>
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-brand">AURELIA</div>
+      <nav>
+        <a href="/admin/">Dashboard</a>
+        <a href="/admin/leads.html">Leads</a>
+        <a href="/admin/projects.html" class="is-active">Projetos</a>
+        <a href="/admin/plans.html">Planos</a>
+        <a href="/admin/faq.html">FAQ</a>
+        <a href="/admin/settings.html">Configurações</a>
+      </nav>
+      <button type="button" class="admin-logout" id="logout">Sair</button>
+    </aside>
+    <div class="admin-main">
+      <header class="admin-top"><h1>Projetos</h1></header>
+      <div id="content"><div class="loading">Carregando…</div></div>
+    </div>
+  </div>
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script>
+    document.getElementById("logout").addEventListener("click", async () => {
+      try { await AURELIA.api.post("/admin/auth/logout"); } catch (_) {}
+      location.href = "/admin/login.html";
+    });
+    (async function () {
+      try {
+        await AURELIA.api.get("/admin/auth/me");
+      } catch {
+        location.href = "/admin/login.html";
+        return;
+      }
+      try {
+        const res = await AURELIA.api.get("/admin/projects");
+        const data = res.data;
+        if (Array.isArray(data)) {
+          document.getElementById("content").innerHTML = data.length
+            ? '<table class="admin-table"><thead><tr><th>Nome</th><th>Info</th></tr></thead><tbody>' +
+              data.map((item) => '<tr><td>' + (item.title || item.name || item.question || item.id) + '</td><td>' +
+              (item.slug || (item.is_active !== undefined ? (item.is_active ? "Ativo" : "Inativo") : "") || "") + '</td></tr>').join("") +
+              "</tbody></table>"
+            : '<div class="empty-state">Nenhum item.</div>';
+        } else {
+          document.getElementById("content").innerHTML = '<pre style="font-size:0.8125rem;overflow:auto">' + JSON.stringify(data, null, 2) + "</pre>";
+        }
+      } catch (e) {
+        document.getElementById("content").innerHTML = '<div class="empty-state">Erro: ' + (e.message || "") + "</div>";
+      }
+    })();
+  </script>
+</body>
+</html>

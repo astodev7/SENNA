@@ -1,0 +1,29 @@
+# AURELIA
+
+> Tecnologia que transforma complexidade em vantagem.
+
+AURELIA desenvolve soluções tecnológicas para empresas que precisam transformar processos complexos em operações mais inteligentes, eficientes e escaláveis.
+
+## Serviços
+- Automação de processos
+- Inteligência Artificial integrada a fluxos
+- Sistemas internos e plataformas sob medida
+- Integrações entre APIs e ferramentas
+- Experiências digitais de alto desempenho
+- Dados: dashboards, estruturas e pipelines
+
+## Páginas
+- / — Home
+- /solucoes.html — Soluções
+- /portfolio.html — Portfólio
+- /planos.html — Planos (ESSENTIAL, GROWTH, SCALE, CUSTOM)
+- /processo.html — Processo de trabalho
+- /sobre.html — Sobre
+- /faq.html — FAQ
+- /contato.html — Contato
+
+## Contato
+Formulário em /contato.html
+
+## Nota
+Este é um projeto demonstrativo institucional.

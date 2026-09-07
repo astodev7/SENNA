@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfólio — AURELIA</title>
+  <meta name="description" content="Projetos da AURELIA: web, sistemas, automação e inteligência artificial.">
+  <link rel="canonical" href="https://aurelia.example/portfolio.html">
+  <meta property="og:title" content="Portfólio — AURELIA">
+  <meta property="og:description" content="Projetos de web, sistemas, automação e IA.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F6F7F5">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/home.css">
+  <style>
+    .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0; }
+    .filter-btn {
+      padding: 0.5rem 1rem; font-size: 0.8125rem; letter-spacing: 0.04em;
+      text-transform: uppercase; border: 1px solid var(--border); color: var(--fg-muted);
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+    .filter-btn:hover, .filter-btn.is-active {
+      border-color: var(--fg); color: var(--fg); background: var(--bg-elevated);
+    }
+    .page-hero { padding: 4rem 0 2rem; border-bottom: 1px solid var(--border); }
+  </style>
+  <script src="/js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="nav-logo">AURELIA</a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="solucoes.html">Soluções</a>
+        <a href="portfolio.html" aria-current="page">Portfólio</a>
+        <a href="planos.html">Planos</a>
+        <a href="processo.html">Processo</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contato.html" class="nav-cta" style="margin-top:0.5rem">Falar com a AURELIA</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Alternar tema">◐</button>
+        <a href="contato.html" class="nav-cta nav-cta-desktop">Falar com a AURELIA</a>
+        <button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <div class="page-hero">
+      <div class="container">
+        <p class="section-label">Portfólio</p>
+        <h1>Projetos</h1>
+        <p class="section-lead" style="margin-top:1rem">Casos que demonstram arquitetura, clareza e engenharia aplicada.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="filters" role="group" aria-label="Filtrar por categoria">
+          <button type="button" class="filter-btn is-active" data-filter="Todos">Todos</button>
+          <button type="button" class="filter-btn" data-filter="Web">Web</button>
+          <button type="button" class="filter-btn" data-filter="Sistemas">Sistemas</button>
+          <button type="button" class="filter-btn" data-filter="Automação">Automação</button>
+          <button type="button" class="filter-btn" data-filter="IA">IA</button>
+          <button type="button" class="filter-btn" data-filter="E-commerce">E-commerce</button>
+        </div>
+        <div class="projects-grid" id="portfolio-grid">
+          <div class="loading">Carregando projetos…</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0">
+        <span>© <span id="year"></span> AURELIA</span>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/analytics.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const grid = document.getElementById('portfolio-grid');
+    function render(list) {
+      if (!list.length) {
+        grid.innerHTML = '<div class="empty-state">Nenhum projeto encontrado.</div>';
+        return;
+      }
+      grid.innerHTML = list.map((p) => `
+        <a href="/projetos/${p.slug}" class="project-card" data-track="portfolio_view" data-track-label="${p.slug}">
+          <div class="project-card-visual">${p.title}</div>
+          <div class="project-card-body">
+            <p class="project-card-cat">${p.category || ''}</p>
+            <h3>${p.title}</h3>
+            <p>${p.summary || ''}</p>
+            <span class="project-card-link">Ver caso →</span>
+          </div>
+        </a>
+      `).join('');
+    }
+    async function load(category) {
+      grid.innerHTML = '<div class="loading">Carregando…</div>';
+      try {
+        const q = category && category !== 'Todos' ? '?category=' + encodeURIComponent(category) : '';
+        const res = await AURELIA.api.get('/projects' + q);
+        render(res.data || []);
+      } catch {
+        grid.innerHTML = '<div class="empty-state">Não foi possível carregar os projetos.</div>';
+      }
+    }
+    document.querySelectorAll('.filter-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        load(btn.dataset.filter);
+      });
+    });
+    load('Todos');
+  </script>
+</body>
+</html>

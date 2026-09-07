@@ -1,0 +1,7 @@
+Contact: mailto:security@aurelia.example
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: pt, en
+Canonical: https://aurelia.example/.well-known/security.txt
+
+# Demonstrative security contact for the AURELIA demo project.
+# Replace with a real channel in production.

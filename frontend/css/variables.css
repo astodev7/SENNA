@@ -1,0 +1,69 @@
+:root {
+  /* Light */
+  --bg: #F6F7F5;
+  --bg-elevated: #ECEEEA;
+  --fg: #111512;
+  --fg-muted: #636A65;
+  --border: #D7DBD6;
+  --accent: #1E6B4A;
+  --accent-hover: #155038;
+  --gold: #C7A96B;
+  --surface: #FFFFFF;
+  --danger: #B33A3A;
+  --success: #1E6B4A;
+
+  --font-display: "Instrument Serif", "Georgia", serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "Consolas", monospace;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  --container: 1120px;
+  --nav-height: 64px;
+
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --radius: 2px;
+  --radius-sm: 1px;
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #0D100F;
+  --bg-elevated: #151917;
+  --fg: #EDF1EC;
+  --fg-muted: #9EA79F;
+  --border: #2B312E;
+  --accent: #59A882;
+  --accent-hover: #82C7A1;
+  --gold: #C7A96B;
+  --surface: #151917;
+  --danger: #E07070;
+  --success: #59A882;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0D100F;
+    --bg-elevated: #151917;
+    --fg: #EDF1EC;
+    --fg-muted: #9EA79F;
+    --border: #2B312E;
+    --accent: #59A882;
+    --accent-hover: #82C7A1;
+    --gold: #C7A96B;
+    --surface: #151917;
+    --danger: #E07070;
+    --success: #59A882;
+    color-scheme: dark;
+  }
+}
