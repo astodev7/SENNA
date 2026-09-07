@@ -1,7 +1,7 @@
-Contact: mailto:security@aurelia.example
+Contact: mailto:security@aurelia.com.br
 Expires: 2027-12-31T23:59:59.000Z
 Preferred-Languages: pt, en
-Canonical: https://aurelia.example/.well-known/security.txt
+Canonical: https://www.aurelia.com.br/.well-known/security.txt
 
-# Demonstrative security contact for the AURELIA demo project.
-# Replace with a real channel in production.
+# Canal para reporte responsável de vulnerabilidades de segurança.
+# Não utilize este endereço para suporte comercial.

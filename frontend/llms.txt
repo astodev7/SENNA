@@ -2,7 +2,7 @@
 
 > Tecnologia que transforma complexidade em vantagem.
 
-AURELIA desenvolve soluções tecnológicas para empresas que precisam transformar processos complexos em operações mais inteligentes, eficientes e escaláveis.
+A AURELIA desenvolve soluções tecnológicas para empresas que precisam transformar processos complexos em operações mais inteligentes, eficientes e escaláveis.
 
 ## Serviços
 - Automação de processos
@@ -21,9 +21,10 @@ AURELIA desenvolve soluções tecnológicas para empresas que precisam transform
 - /sobre.html — Sobre
 - /faq.html — FAQ
 - /contato.html — Contato
+- /privacidade.html — Política de Privacidade
+- /termos.html — Termos de Uso
+- /cookies.html — Política de Cookies
 
 ## Contato
 Formulário em /contato.html
-
-## Nota
-Este é um projeto demonstrativo institucional.
+E-mail: contato@aurelia.com.br

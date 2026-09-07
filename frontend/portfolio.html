@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfólio — AURELIA</title>
   <meta name="description" content="Projetos da AURELIA: web, sistemas, automação e inteligência artificial.">
-  <link rel="canonical" href="https://aurelia.example/portfolio.html">
+  <link rel="canonical" href="https://www.aurelia.com.br/portfolio.html">
   <meta property="og:title" content="Portfólio — AURELIA">
   <meta property="og:description" content="Projetos de web, sistemas, automação e IA.">
   <meta property="og:type" content="website">
@@ -30,13 +30,13 @@
     }
     .page-hero { padding: 4rem 0 2rem; border-bottom: 1px solid var(--border); }
   </style>
-  <script src="/js/theme.js"></script>
+  <script src="js/theme.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Ir para o conteúdo</a>
   <header class="site-header">
     <div class="container nav">
-      <a href="/" class="nav-logo">AURELIA</a>
+      <a href="index.html" class="nav-logo">AURELIA</a>
       <nav class="nav-links" aria-label="Principal">
         <a href="solucoes.html">Soluções</a>
         <a href="portfolio.html" aria-current="page">Portfólio</a>
@@ -98,7 +98,7 @@
         return;
       }
       grid.innerHTML = list.map((p) => `
-        <a href="/projetos/${p.slug}" class="project-card" data-track="portfolio_view" data-track-label="${p.slug}">
+        <a href="projetos/${p.slug}" class="project-card" data-track="portfolio_view" data-track-label="${p.slug}">
           <div class="project-card-visual">${p.title}</div>
           <div class="project-card-body">
             <p class="project-card-cat">${p.category || ''}</p>

@@ -13,7 +13,7 @@ async function seed() {
     console.log('Seeding database...');
 
     // Admin user
-    const adminEmail = process.env.ADMIN_EMAIL || 'admin@aurelia.example';
+    const adminEmail = process.env.ADMIN_EMAIL || 'admin@aurelia.com.br';
     const adminPassword = process.env.ADMIN_PASSWORD || 'ChangeMe123!';
     const adminName = process.env.ADMIN_NAME || 'Administrador';
 
@@ -47,7 +47,7 @@ async function seed() {
         solution: 'Experiência digital unificada: cardápio interativo, pedidos online e painel de gestão operacional.',
         architecture: 'Frontend estático de alta performance + API de pedidos + integração com sistema de cozinha.',
         technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'PostgreSQL'],
-        results: 'Fluxo de pedidos mais fluido e experiência mobile consistente. Resultados demonstrativos para fins de portfólio.',
+        results: 'Fluxo de pedidos mais fluido e experiência mobile consistente. Operação de pedidos mais fluida e experiência mobile consistente.',
         is_published: true,
         is_featured: true,
         sort_order: 1,
@@ -65,7 +65,7 @@ async function seed() {
         solution: 'Site institucional editorial, hierarquia clara de conteúdo e captura de leads estruturada.',
         architecture: 'Arquitetura de conteúdo semântica + formulários protegidos + SEO técnico.',
         technologies: ['HTML', 'CSS', 'JavaScript', 'Express'],
-        results: 'Maior clareza na comunicação e melhor estruturação de leads. Dados demonstrativos.',
+        results: 'Maior clareza na comunicação e melhor estruturação de leads. Melhor estruturação da jornada de leads e comunicação institucional.',
         is_published: true,
         is_featured: true,
         sort_order: 2,
@@ -83,7 +83,7 @@ async function seed() {
         solution: 'Experiência digital premium com narrativa clara, demos interativas e arquitetura de conteúdo.',
         architecture: 'Frontend de performance + camada de conteúdo + integrações de analytics.',
         technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'APIs'],
-        results: 'Narrativa de produto mais clara e experiência alinhada à marca. Demonstrativo.',
+        results: 'Narrativa de produto mais clara e experiência alinhada à marca. Resultado alinhado aos objetivos definidos no projeto.',
         is_published: true,
         is_featured: true,
         sort_order: 3,
@@ -101,7 +101,7 @@ async function seed() {
         solution: 'Camada de automação e integrações sob medida.',
         architecture: 'Orquestração de fluxos + APIs + monitoramento.',
         technologies: ['Node.js', 'PostgreSQL', 'APIs', 'Webhooks'],
-        results: 'Redução de tarefas manuais e maior consistência de dados. Demonstrativo.',
+        results: 'Redução de tarefas manuais e maior consistência de dados. Resultado alinhado aos objetivos definidos no projeto.',
         is_published: true,
         is_featured: false,
         sort_order: 4,
@@ -119,7 +119,7 @@ async function seed() {
         solution: 'Modelos de classificação integrados ao fluxo existente.',
         architecture: 'Pipeline de dados + modelo + API de inferência.',
         technologies: ['Python', 'Node.js', 'APIs', 'PostgreSQL'],
-        results: 'Classificação mais rápida e consistente. Demonstrativo.',
+        results: 'Classificação mais rápida e consistente. Resultado alinhado aos objetivos definidos no projeto.',
         is_published: true,
         is_featured: false,
         sort_order: 5,
@@ -304,6 +304,21 @@ async function seed() {
         answer: 'Canais definidos no início (reuniões periódicas, canal de mensagens e documentação). Transparência é parte do método.',
         sort_order: 6,
       },
+    {
+        question: 'Quais tecnologias vocês utilizam?',
+        answer: 'Escolhemos a stack conforme o problema: web de alta performance, APIs Node.js, PostgreSQL, integrações e, quando faz sentido, camadas de inteligência artificial. A decisão é técnica e alinhada ao contexto do cliente.',
+        sort_order: 7,
+      },
+      {
+        question: 'Como funciona a confidencialidade dos projetos?',
+        answer: 'Trabalhamos com acordos de confidencialidade quando necessário. Informações sensíveis do cliente não são divulgadas sem autorização. Cases públicos só entram no portfólio com anuência.',
+        sort_order: 8,
+      },
+      {
+        question: 'Vocês atendem empresas de qualquer porte?',
+        answer: 'Atendemos empresas que precisam de engenharia séria — do time enxuto ao operação em escala. O plano e o escopo são definidos a partir da necessidade real, não de um pacote genérico.',
+        sort_order: 9,
+      },
     ];
 
     for (const faq of faqs) {
@@ -324,7 +339,7 @@ async function seed() {
     const settings = {
       site_name: 'AURELIA',
       tagline: 'Tecnologia que transforma complexidade em vantagem.',
-      contact_email: 'contato@aurelia.example',
+      contact_email: 'contato@aurelia.com.br',
       contact_phone: '',
       social_linkedin: '',
       social_instagram: '',

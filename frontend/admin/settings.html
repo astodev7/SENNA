@@ -6,10 +6,10 @@
   <title>Configurações — AURELIA Admin</title>
   <meta name="robots" content="noindex, nofollow">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/admin/admin.css">
-  <script src="/js/theme.js"></script>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/admin/admin.css">
+  <script src="../js/theme.js"></script>
 </head>
 <body class="admin-body">
   <div class="admin-layout">
@@ -30,8 +30,8 @@
       <div id="content"><div class="loading">Carregando…</div></div>
     </div>
   </div>
-  <script src="/js/config.js"></script>
-  <script src="/js/api.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/api.js"></script>
   <script>
     document.getElementById("logout").addEventListener("click", async () => {
       try { await AURELIA.api.post("/admin/auth/logout"); } catch (_) {}

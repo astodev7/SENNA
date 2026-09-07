@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /api
 
-Sitemap: https://aurelia.example/sitemap.xml
+Sitemap: https://www.aurelia.com.br/sitemap.xml

@@ -4,7 +4,7 @@
 
 Plataforma web institucional premium com portfólio dinâmico, planos, formulário de leads e painel administrativo.
 
-Projeto demonstrativo completo: frontend HTML/CSS/JS, backend Node.js + Express, PostgreSQL, autenticação, SEO e segurança.
+Plataforma completa: frontend HTML/CSS/JS, backend Node.js + Express, PostgreSQL, autenticação, SEO e segurança.
 
 ## Stack
 
@@ -57,7 +57,7 @@ Acesse: http://localhost:3000
 
 - URL: http://localhost:3000/admin/login.html
 - Credenciais: definidas em `.env` (`ADMIN_EMAIL` / `ADMIN_PASSWORD`)
-- Padrão no seed: `admin@aurelia.example` / `ChangeMe123!`
+- Padrão no seed: `admin@aurelia.com.br` / `ChangeMe123!`
 
 ## API pública
 
@@ -127,4 +127,4 @@ npm test
 
 ## Licença
 
-Projeto demonstrativo. Uso livre para avaliação e portfólio.
+AURELIA — plataforma institucional e operacional.

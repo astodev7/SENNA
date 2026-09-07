@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aurelia.example/</loc><changefreq>weekly</changefreq><priority>1</priority></url>
-  <url><loc>https://aurelia.example/solucoes.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aurelia.example/portfolio.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://aurelia.example/planos.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aurelia.example/processo.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aurelia.example/sobre.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aurelia.example/faq.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://aurelia.example/contato.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aurelia.example/privacidade.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://aurelia.example/termos.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://aurelia.example/cookies.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://aurelia.example/projetos/brasa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aurelia.example/projetos/atlas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aurelia.example/projetos/lumiere</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aurelia.com.br/</loc><changefreq>weekly</changefreq><priority>1</priority></url>
+  <url><loc>https://www.aurelia.com.br/solucoes.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.aurelia.com.br/portfolio.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.aurelia.com.br/planos.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.aurelia.com.br/processo.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aurelia.com.br/sobre.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aurelia.com.br/faq.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.aurelia.com.br/contato.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.aurelia.com.br/privacidade.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.aurelia.com.br/termos.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.aurelia.com.br/cookies.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.aurelia.com.br/projetos/brasa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aurelia.com.br/projetos/atlas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aurelia.com.br/projetos/lumiere</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

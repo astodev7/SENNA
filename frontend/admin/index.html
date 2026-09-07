@@ -6,22 +6,22 @@
   <title>Dashboard — AURELIA Admin</title>
   <meta name="robots" content="noindex, nofollow">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/admin/admin.css">
-  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/admin/admin.css">
+  <script src="../js/theme.js"></script>
 </head>
 <body class="admin-body">
   <div class="admin-layout">
     <aside class="admin-sidebar" id="sidebar">
       <div class="admin-brand">AURELIA</div>
       <nav>
-        <a href="admin/" class="is-active">Dashboard</a>
-        <a href="admin/leads.html">Leads</a>
-        <a href="admin/projects.html">Projetos</a>
-        <a href="admin/plans.html">Planos</a>
-        <a href="admin/faq.html">FAQ</a>
-        <a href="admin/settings.html">Configurações</a>
+        <a href="/admin/" class="is-active">Dashboard</a>
+        <a href="/admin/leads.html">Leads</a>
+        <a href="/admin/projects.html">Projetos</a>
+        <a href="/admin/plans.html">Planos</a>
+        <a href="/admin/faq.html">FAQ</a>
+        <a href="/admin/settings.html">Configurações</a>
       </nav>
       <button type="button" class="admin-logout" id="logout">Sair</button>
     </aside>
@@ -33,9 +33,9 @@
       <div id="content"><div class="loading">Carregando…</div></div>
     </div>
   </div>
-  <script src="/js/config.js"></script>
-  <script src="/js/api.js"></script>
-  <script src="/js/admin/auth-guard.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/admin/auth-guard.js"></script>
   <script>
     (async function () {
       try {
