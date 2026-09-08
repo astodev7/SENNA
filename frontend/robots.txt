@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /api
+
+Disallow: /admin/
+Disallow: /api/
 
 Sitemap: https://www.aurelia.com.br/sitemap.xml
