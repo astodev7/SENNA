@@ -4,7 +4,7 @@ const { pool } = require('../database/pool');
 
 async function listPublic({ category, featured } = {}) {
   let sql = `
-    SELECT id, slug, title, category, summary, cover_image, is_featured, technologies, created_at
+    SELECT id, slug, title, category, summary, cover_image, external_url, is_featured, technologies, created_at
     FROM projects
     WHERE is_published = true
   `;

@@ -37,6 +37,45 @@ async function seed() {
     // Projects
     const projects = [
       {
+        slug: 'vortex',
+        title: 'VORTEX',
+        category: 'Web',
+        summary: 'Plataforma imobiliária de alto padrão com curadoria de imóveis e jornada de contato.',
+        description: 'A Vortex Imóveis apresenta residências exclusivas em São Paulo e região, com vitrine clara, filtros por tipologia e captura de leads qualificados.',
+        problem: 'Imobiliárias de alto padrão precisam de presença digital que transmita exclusividade, organize o inventário e converta interessados sem fricção.',
+        context: 'Mercado imobiliário de luxo em São Paulo — apartamentos, casas, coberturas e terrenos em bairros estratégicos.',
+        solution: 'Site institucional e de catálogo com busca por tipo de imóvel, cards de lançamento e destaque, narrativa de curadoria e formulário de contato integrado.',
+        architecture: 'Frontend de alta performance com listagem de imóveis, filtros e páginas de detalhe; camada de contato preparada para leads comerciais.',
+        technologies: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+        results: 'Vitrine digital alinhada ao posicionamento de alto padrão, com navegação objetiva e canal direto de contato.',
+        external_url: 'https://vortex-beige-iota.vercel.app/',
+        is_published: true,
+        is_featured: true,
+        sort_order: 0,
+        meta_title: 'VORTEX — Imóveis de alto padrão | Projeto AURELIA',
+        meta_description: 'Plataforma digital da Vortex Imóveis: curadoria de imóveis de alto padrão em São Paulo.',
+      },
+      {
+        slug: 'rota',
+        title: 'ROTA 16:15',
+        category: 'E-commerce',
+        summary: 'E-commerce de streetwear com identidade de marca, catálogo e lista VIP para drops limitados.',
+        description: 'A Rota 16:15 é moda urbana com propósito. O site estrutura manifesto, coleção, drops limitados e captura de lista VIP para o Drop 01.',
+        problem: 'Marcas de streetwear precisam de vitrine com identidade forte, catálogo navegável e mecânica de lançamento (lista VIP / drops) sem perder a narrativa da marca.',
+        context: 'Marca de moda urbana com posicionamento autoral e coleções em edições limitadas.',
+        solution: 'Experiência e-commerce com hero de marca, filtros de catálogo, seções de drop e manifesto, e fluxo de inscrição na lista VIP.',
+        architecture: 'Storefront orientado a conversão e narrativa; catálogo por categorias; preparação para drops e lista de espera.',
+        technologies: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+        results: 'Presença digital coerente com a identidade da marca e prontidão para lançamentos e captura de audiência.',
+        external_url: 'https://rota-16-15-v3.vercel.app/',
+        is_published: true,
+        is_featured: true,
+        sort_order: 0,
+        meta_title: 'ROTA 16:15 — Streetwear | Projeto AURELIA',
+        meta_description: 'E-commerce e experiência digital da Rota 16:15 — moda urbana com propósito.',
+      },
+
+      {
         slug: 'brasa',
         title: 'BRASA',
         category: 'Web',
@@ -134,13 +173,14 @@ async function seed() {
         await client.query(
           `INSERT INTO projects (
             slug, title, category, summary, description, problem, context, solution,
-            architecture, technologies, results, is_published, is_featured, sort_order,
+            architecture, technologies, results, cover_image, external_url, is_published, is_featured, sort_order,
             meta_title, meta_description
-          ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16)`,
+          ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18)`,
           [
             p.slug, p.title, p.category, p.summary, p.description, p.problem, p.context,
-            p.solution, p.architecture, p.technologies, p.results, p.is_published,
-            p.is_featured, p.sort_order, p.meta_title, p.meta_description,
+            p.solution, p.architecture, p.technologies, p.results, p.cover_image || null,
+            p.external_url || null, p.is_published, p.is_featured, p.sort_order,
+            p.meta_title, p.meta_description,
           ]
         );
         console.log(`  Project: ${p.title}`);

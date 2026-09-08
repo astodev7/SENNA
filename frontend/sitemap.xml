@@ -14,4 +14,6 @@
   <url><loc>https://www.aurelia.com.br/projetos/brasa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.aurelia.com.br/projetos/atlas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.aurelia.com.br/projetos/lumiere</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aurelia.com.br/projetos/vortex</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.aurelia.com.br/projetos/rota</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

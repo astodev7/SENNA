@@ -54,7 +54,6 @@
         <a href="processo.html">Processo</a>
         <a href="sobre.html">Sobre</a>
         <a href="faq.html">FAQ</a>
-        <a href="contato.html" class="nav-cta" style="margin-top:0.5rem">Falar com a AURELIA</a>
       </nav>
       <div class="nav-actions">
         <button type="button" class="theme-toggle" data-theme-toggle aria-label="Alternar tema">
@@ -327,7 +326,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span id="year"></span> AURELIA.</span>
+        <span>© <span id="year"></span> AURELIA - TODOS OS DIREITOS RESERVADOS </span>
         <span>Engenharia de software e produtos digitais.</span>
       </div>
     </div>
@@ -357,15 +356,18 @@
           return;
         }
         el.innerHTML = projects.slice(0, 3).map((p) => `
-          <a href="projetos/${p.slug}" class="project-card" data-track="portfolio_view" data-track-label="${p.slug}">
-            <div class="project-card-visual">${p.title}</div>
+          <article class="project-card">
+            <a href="projetos/${p.slug}" class="project-card-visual" style="text-decoration:none;color:inherit" data-track="portfolio_view" data-track-label="${p.slug}">${p.title}</a>
             <div class="project-card-body">
               <p class="project-card-cat">${p.category || ''}</p>
               <h3>${p.title}</h3>
               <p>${p.summary || ''}</p>
-              <span class="project-card-link">Ver caso →</span>
+              <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.75rem">
+                <a href="projetos/${p.slug}" class="project-card-link">Ver caso →</a>
+                ${p.external_url ? `<a href="${p.external_url}" class="project-card-link" target="_blank" rel="noopener noreferrer">Ver ao vivo ↗</a>` : ''}
+              </div>
             </div>
-          </a>
+          </article>
         `).join('');
       } catch (e) {
         el.innerHTML = '<div class="empty-state">Não foi possível carregar os projetos.</div>';
