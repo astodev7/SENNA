@@ -54,6 +54,7 @@
         <a href="processo.html">Processo</a>
         <a href="sobre.html">Sobre</a>
         <a href="faq.html">FAQ</a>
+        <a href="contato.html" class="nav-cta" style="margin-top:0.5rem">Falar com a AURELIA</a>
       </nav>
       <div class="nav-actions">
         <button type="button" class="theme-toggle" data-theme-toggle aria-label="Alternar tema">
@@ -104,23 +105,68 @@
       </div>
     </section>
 
-    <section class="section manifesto" id="manifesto">
-      <div class="container">
-        <p class="section-label">Manifesto</p>
-        <h2 class="section-title">Menos complexidade. Mais capacidade.</h2>
-        <p class="section-lead">Transformamos problemas operacionais em sistemas claros: da estratégia à arquitetura, da automação à inteligência — até o resultado.</p>
-        <div class="manifesto-flow" role="list">
-          <span role="listitem">Problema</span>
-          <span class="arrow" aria-hidden="true">→</span>
-          <span role="listitem">Estratégia</span>
-          <span class="arrow" aria-hidden="true">→</span>
-          <span role="listitem">Arquitetura</span>
-          <span class="arrow" aria-hidden="true">→</span>
-          <span role="listitem">Automação</span>
-          <span class="arrow" aria-hidden="true">→</span>
-          <span role="listitem" class="is-accent">Inteligência</span>
-          <span class="arrow" aria-hidden="true">→</span>
-          <span role="listitem">Resultado</span>
+    <section class="section manifesto" id="manifesto" data-manifesto>
+      <div class="container manifesto-layout">
+        <div class="manifesto-left">
+          <p class="section-label">Manifesto</p>
+          <h2 class="manifesto-display">
+            <span class="manifesto-line manifesto-line--soft">Menos</span>
+            <span class="manifesto-line manifesto-line--soft">complexidade.</span>
+            <span class="manifesto-line manifesto-line--strong">Mais</span>
+            <span class="manifesto-line manifesto-line--strong">capacidade.</span>
+          </h2>
+          <p class="manifesto-lead">O método da AURELIA não adiciona camadas. Ele remove o que impede a operação de avançar.</p>
+          <div class="manifesto-nav-hint" aria-hidden="true">
+            <span data-mf-index>01</span><span class="manifesto-nav-sep">/</span><span>06</span>
+            <span class="manifesto-nav-keys">← →</span>
+          </div>
+        </div>
+
+        <div class="manifesto-right">
+          <div class="manifesto-panel" aria-live="polite">
+            <div class="manifesto-watermark" data-mf-watermark aria-hidden="true">01</div>
+            <div class="manifesto-panel-body">
+              <p class="manifesto-panel-index"><span data-mf-num>01</span> / 06</p>
+              <h3 class="manifesto-panel-title" data-mf-title>Problema</h3>
+              <p class="manifesto-panel-desc" data-mf-desc>Antes de automatizar, identificamos onde a complexidade realmente começa.</p>
+            </div>
+          </div>
+
+          <div
+            class="manifesto-rail"
+            role="tablist"
+            aria-label="Método AURELIA — etapas"
+            data-mf-timeline
+            tabindex="0"
+          >
+            <button type="button" class="manifesto-rail-item is-active" role="tab" aria-selected="true" data-mf-step="0" id="mf-tab-0">
+              <span class="manifesto-rail-num">01</span>
+              <span class="manifesto-rail-label">Problema</span>
+            </button>
+            <button type="button" class="manifesto-rail-item" role="tab" aria-selected="false" data-mf-step="1" id="mf-tab-1">
+              <span class="manifesto-rail-num">02</span>
+              <span class="manifesto-rail-label">Estratégia</span>
+            </button>
+            <button type="button" class="manifesto-rail-item" role="tab" aria-selected="false" data-mf-step="2" id="mf-tab-2">
+              <span class="manifesto-rail-num">03</span>
+              <span class="manifesto-rail-label">Arquitetura</span>
+            </button>
+            <button type="button" class="manifesto-rail-item" role="tab" aria-selected="false" data-mf-step="3" id="mf-tab-3">
+              <span class="manifesto-rail-num">04</span>
+              <span class="manifesto-rail-label">Automação</span>
+            </button>
+            <button type="button" class="manifesto-rail-item" role="tab" aria-selected="false" data-mf-step="4" id="mf-tab-4">
+              <span class="manifesto-rail-num">05</span>
+              <span class="manifesto-rail-label">Inteligência</span>
+            </button>
+            <button type="button" class="manifesto-rail-item" role="tab" aria-selected="false" data-mf-step="5" id="mf-tab-5">
+              <span class="manifesto-rail-num">06</span>
+              <span class="manifesto-rail-label">Resultado</span>
+            </button>
+            <div class="manifesto-rail-track" aria-hidden="true">
+              <div class="manifesto-rail-fill" data-mf-progress></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -326,7 +372,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span id="year"></span> AURELIA - TODOS OS DIREITOS RESERVADOS </span>
+        <span>© <span id="year"></span> AURELIA.</span>
         <span>Engenharia de software e produtos digitais.</span>
       </div>
     </div>
@@ -338,6 +384,170 @@
   <script src="js/analytics.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+
+    // Manifesto interactive method
+    (function initManifesto() {
+      const root = document.querySelector('[data-manifesto]');
+      if (!root) return;
+
+      const steps = [
+        {
+          num: '01',
+          title: 'Problema',
+          desc: 'Antes de automatizar, identificamos onde a complexidade realmente começa.',
+        },
+        {
+          num: '02',
+          title: 'Estratégia',
+          desc: 'Definimos o que precisa mudar — e o que não precisa.',
+        },
+        {
+          num: '03',
+          title: 'Arquitetura',
+          desc: 'Estruturamos sistemas capazes de sustentar a operação.',
+        },
+        {
+          num: '04',
+          title: 'Automação',
+          desc: 'Removemos tarefas repetitivas para devolver tempo à operação.',
+        },
+        {
+          num: '05',
+          title: 'Inteligência',
+          desc: 'Transformamos dados e sistemas em capacidade de decisão.',
+        },
+        {
+          num: '06',
+          title: 'Resultado',
+          desc: 'Tecnologia deixa de ser camada adicional e passa a fazer parte da operação.',
+        },
+      ];
+
+      const panel = root.querySelector('.manifesto-panel');
+      const elNum = root.querySelector('[data-mf-num]');
+      const elIndex = root.querySelector('[data-mf-index]');
+      const elWatermark = root.querySelector('[data-mf-watermark]');
+      const elTitle = root.querySelector('[data-mf-title]');
+      const elDesc = root.querySelector('[data-mf-desc]');
+      const elProgress = root.querySelector('[data-mf-progress]');
+      const tabs = Array.from(root.querySelectorAll('[data-mf-step]'));
+      let index = 0;
+      let locked = false;
+      let autoplayId = null;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const AUTOPLAY_MS = 10000;
+
+      function render(i, { fromUser } = {}) {
+        if (locked) return;
+        i = ((i % steps.length) + steps.length) % steps.length;
+        index = i;
+        const step = steps[i];
+
+        const apply = () => {
+          elNum.textContent = step.num;
+          if (elIndex) elIndex.textContent = step.num;
+          if (elWatermark) elWatermark.textContent = step.num;
+          elTitle.textContent = step.title;
+          elDesc.textContent = step.desc;
+          if (elProgress) elProgress.style.width = ((i + 1) / steps.length) * 100 + '%';
+          tabs.forEach((tab, ti) => {
+            const active = ti === i;
+            tab.classList.toggle('is-active', active);
+            tab.classList.toggle('is-passed', ti < i);
+            tab.setAttribute('aria-selected', active ? 'true' : 'false');
+            tab.tabIndex = active ? 0 : -1;
+          });
+          if (fromUser) pauseAutoplay();
+        };
+
+        if (reduceMotion) {
+          apply();
+          return;
+        }
+
+        locked = true;
+        panel.classList.add('is-leaving');
+        window.setTimeout(() => {
+          apply();
+          panel.classList.remove('is-leaving');
+          panel.classList.add('is-entering');
+          window.setTimeout(() => {
+            panel.classList.remove('is-entering');
+            locked = false;
+          }, 420);
+        }, 280);
+      }
+
+      function go(delta) {
+        render(index + delta, { fromUser: true });
+      }
+
+      function pauseAutoplay() {
+        if (autoplayId) {
+          clearInterval(autoplayId);
+          autoplayId = null;
+        }
+      }
+
+      function startAutoplay() {
+        if (reduceMotion) return;
+        pauseAutoplay();
+        autoplayId = setInterval(() => render(index + 1), AUTOPLAY_MS);
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          render(Number(tab.dataset.mfStep), { fromUser: true });
+        });
+      });
+
+      root.addEventListener('keydown', (e) => {
+        if (!root.contains(e.target)) return;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          go(1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          go(-1);
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          render(0, { fromUser: true });
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          render(steps.length - 1, { fromUser: true });
+        }
+      });
+
+      let touchX = null;
+      const swipeTarget = root.querySelector('.manifesto-right') || root;
+      swipeTarget.addEventListener('touchstart', (e) => {
+        touchX = e.changedTouches[0].clientX;
+      }, { passive: true });
+      swipeTarget.addEventListener('touchend', (e) => {
+        if (touchX == null) return;
+        const dx = e.changedTouches[0].clientX - touchX;
+        touchX = null;
+        if (Math.abs(dx) < 40) return;
+        if (dx < 0) go(1);
+        else go(-1);
+      }, { passive: true });
+
+      root.addEventListener('pointerdown', pauseAutoplay);
+
+      render(0);
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) startAutoplay();
+            else pauseAutoplay();
+          });
+        }, { threshold: 0.35 });
+        io.observe(root);
+      } else {
+        startAutoplay();
+      }
+    })();
 
     // Solutions interaction
     document.querySelectorAll('.solution-card').forEach((card) => {
