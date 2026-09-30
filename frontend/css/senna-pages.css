@@ -1,0 +1,140 @@
+/* SENNA — shared internal-page system. Navigation and tokens come from senna-home.css. */
+:root { --font-body: var(--font); --font-display: var(--font); --font-mono: var(--font); --fg: var(--ivory); --fg-muted: var(--muted); --bg: var(--black); --border: var(--line); }
+.senna-pages h1,.senna-pages h2,.senna-pages h3,.senna-pages p { margin:0; }
+.senna-pages button,.senna-pages input,.senna-pages select,.senna-pages textarea { font:inherit; color:inherit; }
+.senna-pages button { cursor:pointer; }
+.senna-pages ul { list-style:none; padding:0; }
+.senna-pages main { padding-top:var(--nav-h); min-height:70vh; }
+.container { padding-inline:var(--pad); max-width:1680px; width:100%; margin-inline:auto; }
+.label-mono,.eyebrow,.deliv-label,.process-time,.about-split-label,.combos-label { font-family:var(--font); font-size:.6875rem; text-transform:uppercase; letter-spacing:.14em; color:var(--muted); font-weight:500; }
+.muted { color:var(--muted); }
+.page-hero,.process-page-hero,.about-hero { padding-top:clamp(4rem,9vw,9rem); padding-bottom:clamp(3rem,6vw,6rem); position:relative; }
+.page-hero>.label-mono,.process-page-hero>.label-mono,.about-hero>.label-mono { margin-bottom:2.2rem; }
+.display-lg,.display-xl { font-weight:500; text-transform:uppercase; letter-spacing:-.045em; line-height:.97; font-size:clamp(2.8rem,6.4vw,7.3rem); max-width:21ch; text-wrap:balance; }
+.display-md { font-weight:500; text-transform:uppercase; letter-spacing:-.03em; line-height:1.05; font-size:clamp(1.8rem,3.5vw,3.5rem); }
+.page-hero .lead,.process-page-hero .lead,.about-hero .lead { color:var(--muted); max-width:43rem; margin-top:2.2rem; font-size:clamp(1rem,1.3vw,1.2rem); line-height:1.65; }
+.senna-pages .section { padding-block:clamp(3.5rem,7vw,7rem); }
+.section-surface { border-block:1px solid var(--line); background:#0c0e0d !important; }
+.section-invert { background:var(--black); border-top:1px solid var(--line); }
+.senna-pages .btn { display:inline-flex; justify-content:center; align-items:center; gap:.5rem; padding:.85rem 1.4rem; min-height:44px; border:1px solid var(--line); border-radius:999px; background:transparent; color:var(--ivory); font-size:.6875rem; text-transform:uppercase; letter-spacing:.12em; font-weight:600; transition:background .25s,color .25s,transform .25s; }
+.senna-pages .btn-primary,.senna-pages .btn-invert { background:var(--ivory); color:var(--black); border-color:var(--ivory); }
+.senna-pages .btn:hover { transform:translateY(-2px); border-color:var(--ivory); }
+.senna-pages .btn-primary:hover,.senna-pages .btn-invert:hover { background:#fff; }
+.senna-pages .btn:disabled { opacity:.55; cursor:wait; }
+.cta-row { display:grid; grid-template-columns:1fr auto; gap:3rem; align-items:end; }
+.cta-row .display-lg { font-size:clamp(2.4rem,5.2vw,5.5rem); max-width:21ch; }
+.cta-row p { color:var(--muted); max-width:40rem; margin-top:1.5rem; }
+/* Service index */
+.solutions-shell { display:grid; grid-template-columns:minmax(220px,1fr) 2fr; gap:clamp(2rem,7vw,8rem); border-top:1px solid var(--line); padding-top:2rem; }
+.solutions-nav { align-self:start; position:sticky; top:calc(var(--nav-h) + 2rem); }
+.solutions-nav button { display:flex; align-items:baseline; gap:1.3rem; width:100%; border:0; border-bottom:1px solid var(--line); background:none; padding:1.3rem 0; text-align:left; color:var(--muted); font-size:clamp(.95rem,1.4vw,1.3rem); transition:color .25s,padding .25s; }
+.solutions-nav button .idx { font-size:.65rem; letter-spacing:.12em; color:var(--muted-dark); }
+.solutions-nav button.is-active,.solutions-nav button:hover { color:var(--ivory); padding-left:.6rem; }
+.solutions-nav button.is-active .idx { color:var(--ivory); }
+.solutions-panel { min-height:510px; padding-top:1rem; }
+.solutions-panel .display-lg { margin-top:2rem; font-size:clamp(2.6rem,5vw,5.6rem); }
+.solutions-panel .short { font-size:1.15rem; margin-top:1.5rem; }
+.solutions-panel .body { color:var(--muted); max-width:40rem; margin-top:1rem; line-height:1.7; }
+.solutions-panel .deliv-label { margin-top:2.5rem; }
+.deliv-grid { display:grid; grid-template-columns:1fr 1fr; margin-top:1rem; border-top:1px solid var(--line); }
+.deliv-grid span { padding:1rem 0; border-bottom:1px solid var(--line); font-size:.9rem; color:var(--white-soft); }
+.solutions-panel .btn { margin-top:2rem; }
+.combos-section { padding-block:clamp(4rem,8vw,8rem); border-top:1px solid var(--line); }
+.combos-layout,.heading-split,.about-principles-head { display:grid; grid-template-columns:1fr 3fr; gap:3rem; margin-bottom:3rem; }
+.combos-copy .display-lg,.heading-split .display-lg,.about-principles-head .display-lg { font-size:clamp(2.3rem,4.7vw,5rem); }
+.intro { color:var(--muted); line-height:1.65; margin-top:1.5rem !important; max-width:42rem; }
+.combos-grid,.work-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:2rem; }
+.combo-card,.work-card,.governance-card { border-top:1px solid var(--line); padding-top:1.75rem; }
+.combo-card h3,.work-card h3,.governance-card h3 { font-size:clamp(1.15rem,1.7vw,1.8rem); font-weight:500; letter-spacing:-.025em; line-height:1.2; text-transform:uppercase; }
+.combo-card p,.work-card p,.governance-card p { margin-top:1rem; color:var(--muted); max-width:30rem; }
+/* Method: open editorial rows */
+.process-table-lg { border-top:1px solid var(--line); }
+.process-row-lg { display:grid; grid-template-columns:.5fr 1.5fr 2fr; gap:2rem; padding:clamp(1.8rem,3vw,3rem) 0; border-bottom:1px solid var(--line); align-items:start; }
+.process-num { font-size:clamp(2.5rem,5vw,5rem); letter-spacing:-.06em; line-height:.95; color:var(--muted-dark); }
+.process-meta h3 { font-size:clamp(1.5rem,2.5vw,2.6rem); text-transform:uppercase; font-weight:500; line-height:1.08; letter-spacing:-.03em; }
+.process-time { margin-top:.9rem !important; }
+.process-desc { color:var(--muted); max-width:38rem; line-height:1.7; }
+.governance-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:2rem; }
+.heading-split { grid-template-columns:2fr 1fr; align-items:end; }
+/* Studio */
+.about-hero .display-xl { max-width:23ch; }
+.about-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:2rem; border-top:1px solid var(--line); padding-block:2.5rem; }
+.about-stat .num { font-size:clamp(3rem,5.8vw,6rem); line-height:1; letter-spacing:-.05em; }
+.about-stat .lab { margin-top:1.25rem; font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; }
+.about-stat .note { font-size:.85rem; color:var(--muted); margin-top:.5rem; }
+.principles { border-top:1px solid var(--line); }
+.senna-pages .principle { display:grid; grid-template-columns:1fr 1fr; gap:3rem; padding:2.2rem 0; border:0; border-bottom:1px solid var(--line); background:transparent; }
+.principle h3 { font-size:clamp(1.5rem,2.5vw,2.6rem); line-height:1.1; font-weight:500; text-transform:uppercase; letter-spacing:-.025em; }
+.principle p { max-width:38rem; color:var(--muted); }
+.about-heading-center { margin-bottom:3rem; }
+.about-heading-center .display-lg { font-size:clamp(2.4rem,4.8vw,5rem); white-space:normal !important; max-width:22ch; }
+/* Selected projects */
+.filters { display:flex; gap:.7rem; flex-wrap:wrap; border-block:1px solid var(--line); padding:1.2rem 0; }
+.filter { border:1px solid transparent; border-radius:999px; padding:.65rem 1rem; background:transparent; color:var(--muted); font-size:.7rem !important; text-transform:uppercase; letter-spacing:.1em; transition:background .25s,color .25s; }
+.filter.active { background:var(--ivory); color:var(--black); }
+.filter:hover { color:var(--ivory); border-color:var(--line); }
+.filter.active:hover { color:var(--black); }
+.count { font-size:.7rem; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin-block:1.5rem !important; }
+.board { display:grid; gap:2rem; }
+.board-3 { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.board-4 { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.board-cell { padding:1rem 0; border-top:1px solid var(--line); }
+.project-card { display:flex; flex-direction:column; gap:1.25rem; border-top:1px solid var(--line); padding-bottom:2.5rem; }
+.project-cover { margin:0; aspect-ratio:16/11; overflow:hidden; background:#111412; display:grid; place-items:center; }
+.project-cover img { width:100%; height:100%; object-fit:cover; transition:transform .7s var(--ease); }
+.project-cover span { color:var(--muted-dark); font-size:clamp(2rem,4vw,4rem); letter-spacing:-.04em; text-transform:uppercase; }
+.project-card:hover .project-cover img { transform:scale(1.035); }
+.project-card .top { display:flex; justify-content:space-between; font-size:.65rem; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); }
+.project-card h3 { font-size:clamp(1.6rem,2.6vw,2.7rem); font-weight:500; text-transform:uppercase; letter-spacing:-.035em; line-height:1.05; }
+.project-card .sum { color:var(--muted); font-size:.9rem; }
+.project-card .techs { display:flex; gap:.75rem; flex-wrap:wrap; font-size:.65rem; color:var(--muted); letter-spacing:.06em; margin-top:auto; }
+/* Conversation and accordion */
+.contact-grid { display:grid; grid-template-columns:1fr 1.7fr; gap:clamp(3rem,8vw,9rem); border-top:1px solid var(--line); padding-top:2.5rem; }
+.contact-grid aside { max-width:25rem; }
+.form { display:grid; gap:1.5rem; }
+.form-2 { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+.field label { display:block; font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; margin-bottom:.7rem; color:var(--muted); }
+.field input,.field select,.field textarea { display:block; width:100%; border:1px solid var(--line); border-radius:0; background:#0c0e0d; padding:.95rem 1rem; min-height:48px; outline-offset:2px; }
+.field textarea { min-height:170px; resize:vertical; }
+.field input:focus,.field textarea:focus,.field select:focus { border-color:var(--chrome); outline:1px solid var(--chrome); }
+.field input[type=checkbox] { display:inline-block; min-height:0; accent-color:var(--ivory); }
+.form>.btn { justify-self:start; }
+#form-status { min-height:1.5rem; }
+.faq-item { border-top:1px solid var(--line); }
+.faq-item:last-child { border-bottom:1px solid var(--line); }
+.faq-item summary { cursor:pointer; display:flex; justify-content:space-between; gap:2rem; padding:1.7rem 0; list-style:none; font-size:clamp(1.15rem,2vw,1.8rem); letter-spacing:-.02em; }
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after { content:'+'; color:var(--muted); }
+.faq-item[open] summary::after { content:'−'; }
+.faq-item .body { color:var(--muted); max-width:55rem; padding-bottom:2rem; line-height:1.7; }
+.faq-end { border-top:1px solid var(--line); padding-block:clamp(4rem,8vw,8rem); }
+.faq-end .display-lg { font-size:clamp(2.5rem,5vw,5rem); margin-bottom:2rem; }
+/* Footer uses the exact home styles. Restore heading spacing after page reset. */
+.senna-pages .final .display { margin:1.5rem 0 3rem; }
+.page-404 h1 { font-size:clamp(7rem,24vw,22rem); letter-spacing:-.065em; line-height:1; font-weight:500; }
+.page-404 { min-height:70vh; display:grid; place-content:center; }
+.senna-pages [hidden] { display:none !important; }
+@media (max-width:1100px) { .governance-grid { grid-template-columns:1fr 1fr; } }
+@media (max-width:960px) {
+ .display-lg,.display-xl { font-size:clamp(2.5rem,8vw,5rem); }
+ .solutions-shell,.contact-grid { grid-template-columns:1fr; gap:2.5rem; }
+ .solutions-nav { position:static; display:grid; grid-template-columns:1fr 1fr; gap:0 1.5rem; }
+ .solutions-panel { min-height:0; }
+ .process-row-lg { grid-template-columns:60px 1fr; gap:1rem; }
+ .process-desc { grid-column:2; }
+ .combos-layout,.heading-split,.about-principles-head { grid-template-columns:1fr; gap:1.5rem; }
+ .board-3 { grid-template-columns:1fr 1fr; }
+ .about-stats { grid-template-columns:1fr 1fr; }
+ .cta-row { grid-template-columns:1fr; gap:2rem; }
+ .cta-row>.btn { justify-self:start; }
+}
+@media (max-width:600px) {
+ .board-3,.board-4,.combos-grid,.work-cards,.governance-grid,.form-2 { grid-template-columns:1fr; }
+ .senna-pages .principle { grid-template-columns:1fr; gap:1rem; }
+ .solutions-nav { grid-template-columns:1fr; }
+ .solutions-nav button { padding:1rem 0; }
+ .page-hero,.process-page-hero,.about-hero { padding-top:3rem; }
+ .about-stats { gap:2rem 1rem; }
+}
+@media (prefers-reduced-motion:reduce) { .senna-pages *, .senna-pages *::before,.senna-pages *::after { animation:none !important; transition:none !important; } }
+@media (min-width:961px) { .nav-cta-m { display:none; } }

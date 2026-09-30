@@ -3,58 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Processo — AURELIA</title>
-  <meta name="description" content="Como a AURELIA conduz projetos: descoberta, estratégia, arquitetura, construção e entrega.">
-  <link rel="canonical" href="https://www.aurelia.com.br/processo.html">
-  <meta name="theme-color" content="#F6F7F5">
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/home.css">
-  <style>.page-hero{padding:4rem 0 2rem;border-bottom:1px solid var(--border)}</style>
-  <script src="js/theme.js"></script>
+  <title>Processo — SENNA</title>
+  <meta name="description" content="Como a SENNA conduz um projeto: diagnóstico, estratégia, arquitetura, construção e operação.">
+  <meta name="theme-color" content="#080908">
+  <link rel="icon" href="./assets/icons/senna-favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/senna-home.css?v=8.4">
+  <link rel="stylesheet" href="./css/senna-pages.css?v=2">
 </head>
-<body>
-  <a class="skip-link" href="#main">Ir para o conteúdo</a>
-  
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="nav-logo">AURELIA</a>
-      <nav class="nav-links" aria-label="Principal">
-        <a href="solucoes.html">Soluções</a>
-        <a href="portfolio.html">Portfólio</a>
-        <a href="planos.html">Planos</a>
-        <a href="processo.html">Processo</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contato.html" class="nav-cta" style="margin-top:0.5rem">Falar com a AURELIA</a>
-      </nav>
-      <div class="nav-actions">
-        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Tema">◐</button>
-        <a href="contato.html" class="nav-cta nav-cta-desktop">Falar com a AURELIA</a>
-        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<body class="senna senna-pages">
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<header class="site-header" id="site-header"><div class="container nav"><a href="./index.html" class="nav-logo" aria-label="SENNA — página inicial">SENNA</a><nav class="nav-links" id="nav-links" aria-label="Principal"><a href="./solucoes.html">Soluções</a><a href="./portfolio.html">Portfólio</a><a href="./processo.html" aria-current="page">Processo</a><a href="./sobre.html">Sobre</a><a href="./faq.html">FAQ</a><a href="./contato.html" class="nav-cta-m">Falar com a SENNA</a></nav><div class="nav-actions"><a href="./contato.html" class="nav-cta">Falar com a SENNA</a><button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button></div></div></header>
+
+<main id="main">
+  <!-- Início: hero editorial (modelo 1) -->
+  <section class="process-page-hero container">
+    <p class="label-mono">Processo</p>
+    <h1 class="display-xl">Método antes de código.</h1>
+    <p class="lead">Um projeto de tecnologia falha muito mais por escopo mal definido do que por dificuldade técnica. Por isso metade do nosso processo acontece antes da primeira linha escrita.</p>
+  </section>
+
+  <!-- Tabela de etapas com tipografia grande (modelo 2) -->
+  <section class="section container" style="padding-top:0">
+    <div class="process-table-lg" role="list">
+      <article class="process-row-lg" role="listitem">
+        <div class="process-num">01</div>
+        <div class="process-meta">
+          <h3>Diagnóstico</h3>
+          <p class="process-time">1 a 2 semanas</p>
+        </div>
+        <p class="process-desc">Entrevistas com quem opera o processo, leitura dos sistemas atuais e identificação do custo real — não do sintoma.</p>
+      </article>
+      <article class="process-row-lg" role="listitem">
+        <div class="process-num">02</div>
+        <div class="process-meta">
+          <h3>Estratégia e escopo</h3>
+          <p class="process-time">1 semana</p>
+        </div>
+        <p class="process-desc">Definição do que será construído, em que ordem, com que critério de sucesso e o que fica fora deste ciclo.</p>
+      </article>
+      <article class="process-row-lg" role="listitem">
+        <div class="process-num">03</div>
+        <div class="process-meta">
+          <h3>Arquitetura</h3>
+          <p class="process-time">1 a 2 semanas</p>
+        </div>
+        <p class="process-desc">Modelo de dados, contratos de API, decisões de infraestrutura e segurança documentadas antes da primeira tela.</p>
+      </article>
+      <article class="process-row-lg" role="listitem">
+        <div class="process-num">04</div>
+        <div class="process-meta">
+          <h3>Construção</h3>
+          <p class="process-time">por ciclos</p>
+        </div>
+        <p class="process-desc">Entregas em ciclos curtos, com ambiente de homologação disponível para o cliente desde o primeiro ciclo.</p>
+      </article>
+      <article class="process-row-lg" role="listitem">
+        <div class="process-num">05</div>
+        <div class="process-meta">
+          <h3>Operação</h3>
+          <p class="process-time">contínuo</p>
+        </div>
+        <p class="process-desc">Publicação, monitoramento, transferência de conhecimento e evolução conforme o contrato de manutenção.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Abaixo dos processos: Governança -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="heading-split">
+        <div>
+          <p class="label-mono">Governança</p>
+          <h2 class="display-lg">O que você recebe em cada ciclo.</h2>
+        </div>
+        <p class="intro">Transparência não é reunião semanal — é artefato entregue.</p>
+      </div>
+      <div class="governance-grid">
+        <article class="governance-card">
+          <h3>Escopo escrito</h3>
+          <p>Documento com o que entra, o que fica fora e critério de aceite.</p>
+        </article>
+        <article class="governance-card">
+          <h3>Ambiente de homologação</h3>
+          <p>Acesso ao que está sendo construído desde o primeiro ciclo.</p>
+        </article>
+        <article class="governance-card">
+          <h3>Documentação técnica</h3>
+          <p>Arquitetura, modelo de dados e contratos de API versionados.</p>
+        </article>
+        <article class="governance-card">
+          <h3>Transferência</h3>
+          <p>Treinamento da equipe e acesso completo à infraestrutura.</p>
+        </article>
+      </div>
+      <p style="margin-top:2.25rem">
+        <a class="btn btn-primary" href="contato.html">Iniciar um diagnóstico</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="final" aria-label="Rodapé">
+    <div class="wrap">
+      <p class="tiny">Have a project?</p>
+      <h2 class="display">Vamos construir o que vem depois.</h2>
+      <a class="btn-ivory" href="./contato.html" data-track="cta_click" data-track-label="cta_final">Iniciar um projeto ↗</a>
+      <div class="final-info">
+        <span>SENNA — Technology &amp; Strategy</span>
+        <a href="mailto:contato@aurelia.exemplo">contato@aurelia.exemplo</a>
+        <span>São Paulo, Brasil</span>
+        <span class="grow"></span>
+        <a href="./privacidade.html">Privacidade</a>
+        <a href="./termos.html">Termos</a>
+        <a href="./cookies.html">Cookies</a>
+        <span>© <span data-year></span> SENNA</span>
       </div>
     </div>
-  </header>
+  </footer>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
 
-  <main id="main">
-    <div class="page-hero"><div class="container"><p class="section-label">Processo</p><h1>Como trabalhamos</h1></div></div>
-    <section class="section"><div class="container">
-      <div class="process-steps">
-        <div class="process-step"><p class="process-step-num">01</p><h3>Descoberta</h3><p>Entendimento do problema e restrições.</p></div>
-        <div class="process-step"><p class="process-step-num">02</p><h3>Estratégia</h3><p>Escopo, prioridades e critérios de sucesso.</p></div>
-        <div class="process-step"><p class="process-step-num">03</p><h3>Arquitetura</h3><p>Desenho técnico e de experiência.</p></div>
-        <div class="process-step"><p class="process-step-num">04</p><h3>Construção</h3><p>Implementação iterativa.</p></div>
-        <div class="process-step"><p class="process-step-num">05</p><h3>Entrega</h3><p>Deploy, documentação e suporte.</p></div>
-      </div>
-    </div></section>
-  </main>
-  <footer class="site-footer"><div class="container"><div class="footer-bottom" style="border:none;padding-top:0"><span>© AURELIA</span></div></div></footer>
-  <script src="js/config.js"></script>
-  <script src="js/api.js"></script>
-  <script src="js/nav.js"></script>
-  <script src="js/analytics.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/analytics.js"></script>
+<script>document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());</script>
 </body>
 </html>

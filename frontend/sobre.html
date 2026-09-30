@@ -3,54 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sobre — AURELIA</title>
-  <meta name="description" content="AURELIA — tecnologia que transforma complexidade em vantagem.">
-  <link rel="canonical" href="https://www.aurelia.com.br/sobre.html">
-  <meta name="theme-color" content="#F6F7F5">
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/home.css">
-  <style>.page-hero{padding:4rem 0 2rem;border-bottom:1px solid var(--border)}</style>
-  <script src="js/theme.js"></script>
+  <title>Sobre — SENNA</title>
+  <meta name="description" content="Existimos para tirar peso da operação de quem constrói coisas sérias.">
+  <meta name="theme-color" content="#080908">
+  <link rel="icon" href="./assets/icons/senna-favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/senna-home.css?v=8.4">
+  <link rel="stylesheet" href="./css/senna-pages.css?v=2">
 </head>
-<body>
-  <a class="skip-link" href="#main">Ir para o conteúdo</a>
-  
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="nav-logo">AURELIA</a>
-      <nav class="nav-links" aria-label="Principal">
-        <a href="solucoes.html">Soluções</a>
-        <a href="portfolio.html">Portfólio</a>
-        <a href="planos.html">Planos</a>
-        <a href="processo.html">Processo</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contato.html" class="nav-cta" style="margin-top:0.5rem">Falar com a AURELIA</a>
-      </nav>
-      <div class="nav-actions">
-        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Tema">◐</button>
-        <a href="contato.html" class="nav-cta nav-cta-desktop">Falar com a AURELIA</a>
-        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<body class="senna senna-pages">
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<header class="site-header" id="site-header"><div class="container nav"><a href="./index.html" class="nav-logo" aria-label="SENNA — página inicial">SENNA</a><nav class="nav-links" id="nav-links" aria-label="Principal"><a href="./solucoes.html">Soluções</a><a href="./portfolio.html">Portfólio</a><a href="./processo.html">Processo</a><a href="./sobre.html" aria-current="page">Sobre</a><a href="./faq.html">FAQ</a><a href="./contato.html" class="nav-cta-m">Falar com a SENNA</a></nav><div class="nav-actions"><a href="./contato.html" class="nav-cta">Falar com a SENNA</a><button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button></div></div></header>
+
+<main id="main">
+  <!-- Imagem 2: hero -->
+  <section class="about-hero container">
+    <p class="label-mono">Sobre</p>
+    <h1 class="display-xl">Existimos para tirar peso da operação de quem constrói coisas sérias.</h1>
+    <p class="lead">A SENNA nasceu da constatação de que a maior parte das empresas não sofre por falta de software, mas por excesso de software desconectado. Trabalhamos no sentido oposto: entender o processo, reduzir o que é redundante e construir apenas o que sustenta o negócio nos próximos anos.</p>
+  </section>
+
+  <!-- Imagem 3: stats -->
+  <section class="container">
+    <div class="about-stats">
+      <div class="about-stat">
+        <p class="num">2019</p>
+        <p class="lab">Início da operação</p>
+        <p class="note">atuação contínua em projetos B2B</p>
+      </div>
+      <div class="about-stat">
+        <p class="num">6</p>
+        <p class="lab">Frentes técnicas</p>
+        <p class="note">da automação aos dados</p>
+      </div>
+      <div class="about-stat">
+        <p class="num">5</p>
+        <p class="lab">Etapas de método</p>
+        <p class="note">nenhuma delas opcional</p>
+      </div>
+      <div class="about-stat">
+        <p class="num">0</p>
+        <p class="lab">Dependência artificial</p>
+        <p class="note">o cliente é dono de tudo</p>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main id="main">
-    <div class="page-hero"><div class="container"><p class="section-label">Sobre</p><h1>AURELIA</h1>
-    <p class="section-lead" style="margin-top:1rem">Tecnologia que transforma complexidade em vantagem.</p></div></div>
-    <section class="section"><div class="container" style="max-width:40rem">
-      <p style="color:var(--fg-muted);margin-bottom:1.5rem">A AURELIA desenvolve soluções tecnológicas para empresas que precisam transformar processos complexos em operações mais inteligentes, eficientes e escaláveis.</p>
-      <p style="color:var(--fg-muted)">Trabalhamos com arquitetura clara, engenharia responsável e comunicação direta. Atuamos lado a lado com empresas que precisam de sistemas, automações e experiências digitais com padrão de produção.</p>
-    </div></section>
-  </main>
-  <footer class="site-footer"><div class="container"><div class="footer-bottom" style="border:none;padding-top:0"><span>© AURELIA</span></div></div></footer>
-  <script src="js/config.js"></script>
-  <script src="js/api.js"></script>
-  <script src="js/nav.js"></script>
-  <script src="js/analytics.js"></script>
+  <!-- Imagem 3+4: princípios -->
+  <section class="section">
+    <div class="container">
+      <div class="about-principles-head">
+        <p class="about-split-label">Princípios</p>
+        <h2 class="display-lg">Como decidimos o que construir.</h2>
+      </div>
+      <div class="principles" style="margin-top:2.5rem">
+        <div class="principle">
+          <h3>Engenharia antes de estética</h3>
+          <p>A interface é a última camada de uma decisão técnica. Quando a arquitetura está certa, o produto envelhece bem.</p>
+        </div>
+        <div class="principle">
+          <h3>Escopo escrito</h3>
+          <p>Nenhum projeto começa sem escopo, critério de aceite e responsabilidade definidos por escrito.</p>
+        </div>
+        <div class="principle">
+          <h3>Reduzir, não acumular</h3>
+          <p>Cada sistema novo precisa justificar sua existência. Preferimos remover complexidade a somar mais uma ferramenta.</p>
+        </div>
+        <div class="principle">
+          <h3>O cliente é dono</h3>
+          <p>Código, dados, documentação e infraestrutura pertencem a quem contratou. Sem dependência artificial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Imagem 4: como trabalhamos -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="about-heading-center">
+        <p class="about-split-label" style="justify-content:center">Como trabalhamos</p>
+        <h2 class="display-lg" style="margin-top:1rem;white-space:nowrap">Equipe reduzida, responsabilidade direta.</h2>
+        <p class="intro" style="margin-top:1.25rem">Quem conduz o diagnóstico é quem acompanha a construção. Não há camada de intermediação entre a decisão técnica e o cliente.</p>
+      </div>
+      <div class="work-cards">
+        <article class="work-card">
+          <h3>Diagnóstico conduzido por engenharia</h3>
+          <p>Sem discurso comercial antes de entender o problema.</p>
+        </article>
+        <article class="work-card">
+          <h3>Ciclos curtos e verificáveis</h3>
+          <p>Cada entrega pode ser testada por quem vai usar.</p>
+        </article>
+        <article class="work-card">
+          <h3>Documentação como entrega</h3>
+          <p>O conhecimento fica na empresa, não na agência.</p>
+        </article>
+      </div>
+      <p style="margin-top:2rem">
+        <a class="btn btn-primary" href="contato.html">Conversar com a equipe →</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="final" aria-label="Rodapé">
+    <div class="wrap">
+      <p class="tiny">Have a project?</p>
+      <h2 class="display">Vamos construir o que vem depois.</h2>
+      <a class="btn-ivory" href="./contato.html" data-track="cta_click" data-track-label="cta_final">Iniciar um projeto ↗</a>
+      <div class="final-info">
+        <span>SENNA — Technology &amp; Strategy</span>
+        <a href="mailto:contato@aurelia.exemplo">contato@aurelia.exemplo</a>
+        <span>São Paulo, Brasil</span>
+        <span class="grow"></span>
+        <a href="./privacidade.html">Privacidade</a>
+        <a href="./termos.html">Termos</a>
+        <a href="./cookies.html">Cookies</a>
+        <span>© <span data-year></span> SENNA</span>
+      </div>
+    </div>
+  </footer>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+
+<script src="js/nav.js"></script>
+<script src="js/analytics.js"></script>
+<script>document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());</script>
 </body>
 </html>

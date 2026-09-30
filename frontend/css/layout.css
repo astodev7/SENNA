@@ -132,9 +132,6 @@
   .nav-toggle {
     display: flex;
   }
-  .nav-cta-desktop {
-    display: none;
-  }
 }
 
 /* Footer */
@@ -387,3 +384,7 @@
   color: var(--fg-muted);
   border: 1px dashed var(--border);
 }
+
+.footer-tagline{color:var(--fg-muted);font-size:.875rem;margin-top:.75rem;max-width:16rem;line-height:1.45}
+.footer-note{color:var(--fg-muted)}
+.nav-link.is-active{color:var(--fg)}

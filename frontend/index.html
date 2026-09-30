@@ -2,639 +2,177 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AURELIA — Tecnologia que transforma complexidade em vantagem</title>
-  <meta name="description" content="A AURELIA desenvolve automações, sistemas e experiências digitais sob medida para transformar processos complexos em operações mais inteligentes e escaláveis.">
-  <link rel="canonical" href="https://www.aurelia.com.br/">
-  <meta property="og:title" content="AURELIA — Tecnologia que transforma complexidade em vantagem">
-  <meta property="og:description" content="Automações, sistemas e experiências digitais sob medida.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SENNA — Technology &amp; Strategy | Sites, sistemas e automações</title>
+  <meta name="description" content="A SENNA combina estratégia, design e engenharia para construir sites, sistemas e automações que transformam complexidade em capacidade.">
+  <meta name="theme-color" content="#080908">
+  <meta property="og:title" content="SENNA — Menos complexidade. Mais capacidade.">
+  <meta property="og:description" content="Sites, sistemas e automações para transformar complexidade em capacidade.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.aurelia.com.br/">
-  <meta property="og:image" content="https://www.aurelia.com.br/assets/images/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#F6F7F5">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./assets/icons/senna-favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/home.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "AURELIA",
-    "description": "Tecnologia que transforma complexidade em vantagem.",
-    "url": "https://www.aurelia.com.br"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "AURELIA",
-    "url": "https://www.aurelia.com.br"
-  }
-  </script>
-  <script src="js/theme.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" type="image/png" href="./assets/images/senna-sculpture-hq-original.png" fetchpriority="high">
+  <link rel="stylesheet" href="./css/senna-home.css?v=8.4">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"SENNA","description":"Technology & Strategy — sites, sistemas e automações."}</script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+<body class="senna">
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;pointer-events:none">
+  <defs>
+    <filter id="senna-natural-glow" color-interpolation-filters="sRGB">
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0 .015 .045 .08 .13 .20 .28 .35 .4 .45 .5 .55 .6 .65 .7 .75 .8 .85 .9 .95 1"/>
+        <feFuncG type="table" tableValues="0 .015 .045 .08 .13 .20 .28 .35 .4 .45 .5 .55 .6 .65 .7 .75 .8 .85 .9 .95 1"/>
+        <feFuncB type="table" tableValues="0 .015 .045 .08 .13 .20 .28 .35 .4 .45 .5 .55 .6 .65 .7 .75 .8 .85 .9 .95 1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
 
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="nav-logo" aria-label="AURELIA — página inicial">AURELIA</a>
-      <nav class="nav-links" aria-label="Principal">
-        <a href="solucoes.html">Soluções</a>
-        <a href="portfolio.html">Portfólio</a>
-        <a href="planos.html">Planos</a>
-        <a href="processo.html">Processo</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contato.html" class="nav-cta" style="margin-top:0.5rem">Falar com a AURELIA</a>
-      </nav>
-      <div class="nav-actions">
-        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Alternar tema">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        </button>
-        <a href="contato.html" class="nav-cta nav-cta-desktop" data-track="cta_click" data-track-label="nav">Falar com a AURELIA</a>
-        <button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+<a class="skip" href="#main">Ir para o conteúdo</a>
+
+<header class="site-header" id="site-header">
+  <div class="wrap nav">
+    <a href="./index.html" class="nav-logo" aria-label="SENNA — página inicial">SENNA</a>
+    <nav class="nav-links" id="nav-links" aria-label="Principal">
+      <a href="./solucoes.html">Soluções</a>
+      <a href="./portfolio.html">Portfólio</a>
+      <a href="./processo.html">Processo</a>
+      <a href="./sobre.html">Sobre</a>
+      <a href="./faq.html">FAQ</a>
+      <a href="./contato.html" class="nav-cta-m" style="display:none">Falar com a SENNA</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="./contato.html" class="nav-cta" data-track="cta_click" data-track-label="nav">Falar com a SENNA</a>
+      <button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main id="main">
-    <section class="hero container">
-      <div class="hero-content">
-        <p class="hero-label">Engenharia · Automação · Sistemas</p>
-        <h1>Tecnologia que transforma complexidade em vantagem.</h1>
-        <p class="hero-sub">A AURELIA projeta automações, sistemas e experiências digitais sob medida para transformar processos complexos em operações mais eficientes, inteligentes e escaláveis.</p>
+<main id="main">
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <span class="side-tag tiny left" aria-hidden="true"><span>01 / Home</span></span>
+    <span class="side-tag tiny" aria-hidden="true"><span>Technology</span><span>Strategy</span><span>Engineering</span></span>
+
+    <h1 class="sr-only">Menos complexidade. Mais capacidade. SENNA — Technology &amp; Strategy.</h1>
+    <div class="hero-stage">
+      <p class="hl hl-left" aria-hidden="true"><span>Menos</span><span>complexidade.</span></p>
+      <div class="sculpt" aria-hidden="true">
+        <span class="sculpt-light"></span><span class="sculpt-shadow"></span>
+        <div class="sculpt-entrance">
+          <div class="sculpt-move" id="sculpt-move">
+            <img src="./assets/images/senna-sculpture-hq-original.png" width="1237" height="1271" alt="" fetchpriority="high" decoding="async">
+          </div>
+        </div>
+      </div>
+      <p class="hl hl-right" aria-hidden="true"><span>Mais</span><span>capacidade.</span></p>
+    </div>
+
+    <div class="hero-foot">
+      <div>
+        <p class="brandline">SENNA<small>TECHNOLOGY &amp; STRATEGY</small></p>
+        <p class="hero-desc">Sites, sistemas e automações para transformar complexidade em capacidade.</p>
+      </div>
+      <p class="hero-mid tiny" aria-hidden="true">Scroll to explore ↓</p>
+      <div class="hero-right">
+        <p class="hero-meta tiny" aria-hidden="true"><span>SENNA / 2026</span></p>
         <div class="hero-ctas">
-          <a href="contato.html" class="btn btn-primary" data-track="cta_click" data-track-label="hero_primary">Falar com a AURELIA</a>
-          <a href="portfolio.html" class="btn btn-secondary" data-track="cta_click" data-track-label="hero_secondary">Explorar projetos</a>
+          <a class="link-arrow" href="./portfolio.html" data-track="cta_click" data-track-label="hero_projects">Ver projetos ↗</a>
+          <a class="btn-ivory" href="./contato.html" data-track="cta_click" data-track-label="hero_primary">Iniciar um projeto ↗</a>
         </div>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="geo-system">
-          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-            <g class="geo-rotate">
-              <rect class="geo-node" x="80" y="80" width="240" height="240"/>
-              <rect class="geo-node-accent" x="120" y="120" width="160" height="160"/>
-              <rect class="geo-node" x="160" y="160" width="80" height="80"/>
-              <line class="geo-line" x1="200" y1="40" x2="200" y2="360"/>
-              <line class="geo-line" x1="40" y1="200" x2="360" y2="200"/>
-              <circle class="geo-dot geo-pulse" cx="200" cy="200" r="4"/>
-              <circle class="geo-node" cx="200" cy="80" r="8"/>
-              <circle class="geo-node" cx="200" cy="320" r="8"/>
-              <circle class="geo-node" cx="80" cy="200" r="8"/>
-              <circle class="geo-node" cx="320" cy="200" r="8"/>
-              <circle class="geo-node-accent" cx="120" cy="120" r="5"/>
-              <circle class="geo-node-accent" cx="280" cy="120" r="5"/>
-              <circle class="geo-node-accent" cx="120" cy="280" r="5"/>
-              <circle class="geo-node-accent" cx="280" cy="280" r="5"/>
-              <line class="geo-line" x1="120" y1="120" x2="280" y2="280"/>
-              <line class="geo-line" x1="280" y1="120" x2="120" y2="280"/>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <section class="section manifesto" id="manifesto" data-manifesto>
-      <div class="container manifesto-layout">
-        <div class="manifesto-left">
-          <p class="section-label">Manifesto</p>
-          <h2 class="manifesto-display">
-            <span class="manifesto-line manifesto-line--soft">Menos</span>
-            <span class="manifesto-line manifesto-line--soft">complexidade.</span>
-            <span class="manifesto-line manifesto-line--strong">Mais</span>
-            <span class="manifesto-line manifesto-line--strong">capacidade.</span>
-          </h2>
-          <p class="manifesto-lead">O método da AURELIA não adiciona camadas. Ele remove o que impede a operação de avançar.</p>
-          <div class="manifesto-nav-hint" aria-hidden="true">
-            <span data-mf-index>01</span><span class="manifesto-nav-sep">/</span><span>06</span>
-            <span class="manifesto-nav-keys">← →</span>
-          </div>
-        </div>
-
-        <div class="manifesto-right">
-          <div class="manifesto-panel" aria-live="polite">
-            <div class="manifesto-watermark" data-mf-watermark aria-hidden="true">01</div>
-            <div class="manifesto-panel-body">
-              <p class="manifesto-panel-index"><span data-mf-num>01</span> / 06</p>
-              <h3 class="manifesto-panel-title" data-mf-title>Problema</h3>
-              <p class="manifesto-panel-desc" data-mf-desc>Antes de automatizar, identificamos onde a complexidade realmente começa.</p>
-            </div>
-          </div>
-
-          <div
-            class="manifesto-rail"
-            role="tablist"
-            aria-label="Método AURELIA — etapas"
-            data-mf-timeline
-            tabindex="0"
-          >
-            <button type="button" class="manifesto-rail-item is-active" role="tab" aria-selected="true" data-mf-step="0" id="mf-tab-0">
-              <span class="manifesto-rail-num">01</span>
-              <span class="manifesto-rail-label">Problema</span>
-            </button>
-            <button type="button" class="manifesto-rail-item" role="tab" aria-selected="false" data-mf-step="1" id="mf-tab-1">
-              <span class="manifesto-rail-num">02</span>
-              <span class="manifesto-rail-label">Estratégia</span>
-            </button>
-            <button type="button" class="manifesto-rail-item" role="tab" aria-selected="false" data-mf-step="2" id="mf-tab-2">
-              <span class="manifesto-rail-num">03</span>
-              <span class="manifesto-rail-label">Arquitetura</span>
-            </button>
-            <button type="button" class="manifesto-rail-item" role="tab" aria-selected="false" data-mf-step="3" id="mf-tab-3">
-              <span class="manifesto-rail-num">04</span>
-              <span class="manifesto-rail-label">Automação</span>
-            </button>
-            <button type="button" class="manifesto-rail-item" role="tab" aria-selected="false" data-mf-step="4" id="mf-tab-4">
-              <span class="manifesto-rail-num">05</span>
-              <span class="manifesto-rail-label">Inteligência</span>
-            </button>
-            <button type="button" class="manifesto-rail-item" role="tab" aria-selected="false" data-mf-step="5" id="mf-tab-5">
-              <span class="manifesto-rail-num">06</span>
-              <span class="manifesto-rail-label">Resultado</span>
-            </button>
-            <div class="manifesto-rail-track" aria-hidden="true">
-              <div class="manifesto-rail-fill" data-mf-progress></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="solucoes">
-      <div class="container">
-        <p class="section-label">Soluções</p>
-        <h2 class="section-title">O que construímos</h2>
-        <p class="section-lead">Capacidades combináveis para resolver problemas reais de operação, produto e escala.</p>
-        <div class="solutions-grid" id="solutions-grid">
-          <article class="solution-card" data-solution="automacao">
-            <p class="solution-num">01</p>
-            <h3>Automação</h3>
-            <p>Automação de processos repetitivos. Fluxos estáveis, menos atrito operacional.</p>
-          </article>
-          <article class="solution-card" data-solution="ia">
-            <p class="solution-num">02</p>
-            <h3>Inteligência Artificial</h3>
-            <p>IA integrada a fluxos e produtos. Classificação, assistência e decisão assistida.</p>
-          </article>
-          <article class="solution-card" data-solution="sistemas">
-            <p class="solution-num">03</p>
-            <h3>Sistemas</h3>
-            <p>Sistemas internos e plataformas sob medida. Estrutura que escala com o negócio.</p>
-          </article>
-          <article class="solution-card" data-solution="integracoes">
-            <p class="solution-num">04</p>
-            <h3>Integrações</h3>
-            <p>APIs, sistemas e ferramentas conectadas. Dados e processos no mesmo fluxo.</p>
-          </article>
-          <article class="solution-card" data-solution="experiencias">
-            <p class="solution-num">05</p>
-            <h3>Experiências digitais</h3>
-            <p>Sites e produtos digitais de alto desempenho. Clareza, performance e conversão.</p>
-          </article>
-          <article class="solution-card" data-solution="dados">
-            <p class="solution-num">06</p>
-            <h3>Dados</h3>
-            <p>Dashboards, estruturas e pipelines. Visibilidade e base para decisões.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="indicators">
-          <div>
-            <p class="indicator-value">6</p>
-            <p class="indicator-label">Áreas de solução</p>
-          </div>
-          <div>
-            <p class="indicator-value">4</p>
-            <p class="indicator-label">Planos de engajamento</p>
-          </div>
-          <div>
-            <p class="indicator-value">5+</p>
-            <p class="indicator-label">Projetos em portfólio</p>
-          </div>
-          <div>
-            <p class="indicator-value">1</p>
-            <p class="indicator-label">Método claro de entrega</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="projetos">
-      <div class="container">
-        <p class="section-label">Portfólio</p>
-        <h2 class="section-title">Projetos em destaque</h2>
-        <p class="section-lead">Casos que ilustram como arquitetura, design e engenharia se combinam.</p>
-        <div class="projects-grid" id="featured-projects">
-          <div class="loading">Carregando projetos…</div>
-        </div>
-        <p style="margin-top: var(--space-5)">
-          <a href="portfolio.html" class="btn btn-secondary">Ver portfólio completo</a>
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="processo">
-      <div class="container">
-        <p class="section-label">Processo</p>
-        <h2 class="section-title">Como trabalhamos</h2>
-        <p class="section-lead">Etapas definidas, entregáveis claros e alinhamento contínuo.</p>
-        <div class="process-steps">
-          <div class="process-step">
-            <p class="process-step-num">01</p>
-            <h3>Descoberta</h3>
-            <p>Entendimento do problema, contexto e restrições.</p>
-          </div>
-          <div class="process-step">
-            <p class="process-step-num">02</p>
-            <h3>Estratégia</h3>
-            <p>Definição de escopo, prioridades e critérios de sucesso.</p>
-          </div>
-          <div class="process-step">
-            <p class="process-step-num">03</p>
-            <h3>Arquitetura</h3>
-            <p>Desenho técnico e de experiência antes da implementação.</p>
-          </div>
-          <div class="process-step">
-            <p class="process-step-num">04</p>
-            <h3>Construção</h3>
-            <p>Implementação iterativa com validação contínua.</p>
-          </div>
-          <div class="process-step">
-            <p class="process-step-num">05</p>
-            <h3>Entrega</h3>
-            <p>Deploy, documentação e suporte à operação.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="filosofia">
-      <div class="container">
-        <p class="section-label">Filosofia</p>
-        <h2 class="section-title">Princípios de engenharia</h2>
-        <div class="philosophy-grid">
-          <div class="philosophy-block">
-            <h3>Clareza antes de complexidade</h3>
-            <p>Preferimos estruturas simples e legíveis a soluções ornamentadas. Complexidade só quando o problema exige.</p>
-          </div>
-          <div class="philosophy-block">
-            <h3>Arquitetura como decisão</h3>
-            <p>Escolhas técnicas são documentadas e justificadas. O sistema deve poder evoluir sem recomeçar do zero.</p>
-          </div>
-          <div class="philosophy-block">
-            <h3>Entrega responsável</h3>
-            <p>Código, segurança e operação fazem parte do mesmo compromisso. Não entregamos apenas interface.</p>
-          </div>
-          <div class="philosophy-block">
-            <h3>Parceria de longo prazo</h3>
-            <p>Muitos projetos começam pontuais e evoluem. Construímos bases que suportam crescimento.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="planos">
-      <div class="container">
-        <p class="section-label">Planos</p>
-        <h2 class="section-title">Formas de engajamento</h2>
-        <p class="section-lead">Do essencial ao sob medida. Valores sob consulta — alinhados ao escopo real.</p>
-        <div class="plans-grid" id="home-plans">
-          <div class="loading">Carregando planos…</div>
-        </div>
-        <p style="margin-top: var(--space-5)">
-          <a href="planos.html" class="btn btn-secondary">Comparar planos</a>
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container">
-        <p class="section-label">FAQ</p>
-        <h2 class="section-title">Perguntas frequentes</h2>
-        <div class="faq-list" id="home-faq">
-          <div class="loading">Carregando…</div>
-        </div>
-        <p style="margin-top: var(--space-5)">
-          <a href="faq.html" class="btn btn-secondary">Ver todas as perguntas</a>
-        </p>
-      </div>
-    </section>
-
-    <section class="cta-final">
-      <div class="container">
-        <h2>Pronto para reduzir complexidade?</h2>
-        <p>Conte o contexto. Nós avaliamos o encaixe e propomos o próximo passo com clareza.</p>
-        <a href="contato.html" class="btn btn-primary" data-track="cta_click" data-track-label="cta_final">Falar com a AURELIA</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <p class="footer-brand">AURELIA</p>
-          <p class="footer-desc">Tecnologia que transforma complexidade em vantagem.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Navegação</h4>
-          <a href="solucoes.html">Soluções</a>
-          <a href="portfolio.html">Portfólio</a>
-          <a href="planos.html">Planos</a>
-          <a href="processo.html">Processo</a>
-        </div>
-        <div class="footer-col">
-          <h4>Empresa</h4>
-          <a href="sobre.html">Sobre</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contato.html">Contato</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="privacidade.html">Privacidade</a>
-          <a href="termos.html">Termos</a>
-          <a href="cookies.html">Cookies</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> AURELIA.</span>
-        <span>Engenharia de software e produtos digitais.</span>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="js/config.js"></script>
-  <script src="js/api.js"></script>
-  <script src="js/nav.js"></script>
-  <script src="js/analytics.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <section class="section" id="expertise">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="tiny">01 / Expertise</p>
+        <h2 class="display">Construímos o digital que faz empresas avançarem.</h2>
+      </div>
+      <div class="rows">
+        <a class="row" href="./solucoes.html" data-track="cta_click" data-track-label="expertise_web">
+          <span class="idx">01</span>
+          <span class="body"><h3>Web</h3><p>Sites, landing pages e experiências digitais.</p></span>
+          <span class="arr" aria-hidden="true">↗</span>
+        </a>
+        <a class="row" href="./solucoes.html" data-track="cta_click" data-track-label="expertise_systems">
+          <span class="idx">02</span>
+          <span class="body"><h3>Systems</h3><p>Plataformas e sistemas personalizados.</p></span>
+          <span class="arr" aria-hidden="true">↗</span>
+        </a>
+        <a class="row" href="./solucoes.html" data-track="cta_click" data-track-label="expertise_automation">
+          <span class="idx">03</span>
+          <span class="body"><h3>Automation</h3><p>Processos conectados e operações mais eficientes.</p></span>
+          <span class="arr" aria-hidden="true">↗</span>
+        </a>
+        <a class="row" href="./solucoes.html" data-track="cta_click" data-track-label="expertise_integration">
+          <span class="idx">04</span>
+          <span class="body"><h3>Integration</h3><p>APIs, dados e ferramentas trabalhando juntas.</p></span>
+          <span class="arr" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
+  <section class="section" id="projetos" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="tiny">02 / Selected work</p>
+        <h2 class="display">Work that moves <span class="dim">business forward.</span></h2>
+      </div>
+      <div class="work-list" id="work-list" aria-live="polite"><p class="work-empty">Carregando projetos…</p></div>
+      <p class="work-more"><a class="link-arrow" href="./portfolio.html">Ver portfólio completo ↗</a></p>
+    </div>
+  </section>
 
-    // Manifesto interactive method
-    (function initManifesto() {
-      const root = document.querySelector('[data-manifesto]');
-      if (!root) return;
+  <section class="principle" id="principio">
+    <div class="wrap">
+      <p class="tiny">Our principle</p>
+      <h2 class="display">Technology shouldn’t add complexity.</h2>
+      <p class="lead">Projetamos soluções digitais para remover atrito, organizar operações e ampliar capacidade.</p>
+    </div>
+  </section>
 
-      const steps = [
-        {
-          num: '01',
-          title: 'Problema',
-          desc: 'Antes de automatizar, identificamos onde a complexidade realmente começa.',
-        },
-        {
-          num: '02',
-          title: 'Estratégia',
-          desc: 'Definimos o que precisa mudar — e o que não precisa.',
-        },
-        {
-          num: '03',
-          title: 'Arquitetura',
-          desc: 'Estruturamos sistemas capazes de sustentar a operação.',
-        },
-        {
-          num: '04',
-          title: 'Automação',
-          desc: 'Removemos tarefas repetitivas para devolver tempo à operação.',
-        },
-        {
-          num: '05',
-          title: 'Inteligência',
-          desc: 'Transformamos dados e sistemas em capacidade de decisão.',
-        },
-        {
-          num: '06',
-          title: 'Resultado',
-          desc: 'Tecnologia deixa de ser camada adicional e passa a fazer parte da operação.',
-        },
-      ];
+  <section class="section" id="sobre-senna">
+    <div class="wrap about">
+      <div>
+        <p class="tiny">SENNA / Technology &amp; Strategy</p>
+        <h2>Estratégia, design e engenharia no mesmo time.</h2>
+        <p>A SENNA combina estratégia, design e engenharia para construir produtos digitais, sistemas e automações que resolvem problemas reais.</p>
+        <a class="link-arrow" href="./sobre.html" data-track="cta_click" data-track-label="about">Conhecer a SENNA ↗</a>
+      </div>
+      <div class="about-visual" aria-hidden="true">
+        <img src="./assets/images/senna-sculpture.webp" alt="" width="810" height="810" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
 
-      const panel = root.querySelector('.manifesto-panel');
-      const elNum = root.querySelector('[data-mf-num]');
-      const elIndex = root.querySelector('[data-mf-index]');
-      const elWatermark = root.querySelector('[data-mf-watermark]');
-      const elTitle = root.querySelector('[data-mf-title]');
-      const elDesc = root.querySelector('[data-mf-desc]');
-      const elProgress = root.querySelector('[data-mf-progress]');
-      const tabs = Array.from(root.querySelectorAll('[data-mf-step]'));
-      let index = 0;
-      let locked = false;
-      let autoplayId = null;
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const AUTOPLAY_MS = 10000;
+  <section class="final" id="contato-final">
+    <div class="wrap">
+      <p class="tiny">Have a project?</p>
+      <h2 class="display">Vamos construir o que vem depois.</h2>
+      <a class="btn-ivory" href="./contato.html" data-track="cta_click" data-track-label="cta_final">Iniciar um projeto ↗</a>
+      <div class="final-info">
+        <span>SENNA — Technology &amp; Strategy</span>
+        <a href="mailto:contato@aurelia.exemplo">contato@aurelia.exemplo</a>
+        <span>São Paulo, Brasil</span>
+        <span class="grow"></span>
+        <a href="./privacidade.html">Privacidade</a>
+        <a href="./termos.html">Termos</a>
+        <a href="./cookies.html">Cookies</a>
+        <span>© <span data-year></span> SENNA</span>
+      </div>
+    </div>
+  </section>
+</main>
 
-      function render(i, { fromUser } = {}) {
-        if (locked) return;
-        i = ((i % steps.length) + steps.length) % steps.length;
-        index = i;
-        const step = steps[i];
-
-        const apply = () => {
-          elNum.textContent = step.num;
-          if (elIndex) elIndex.textContent = step.num;
-          if (elWatermark) elWatermark.textContent = step.num;
-          elTitle.textContent = step.title;
-          elDesc.textContent = step.desc;
-          if (elProgress) elProgress.style.width = ((i + 1) / steps.length) * 100 + '%';
-          tabs.forEach((tab, ti) => {
-            const active = ti === i;
-            tab.classList.toggle('is-active', active);
-            tab.classList.toggle('is-passed', ti < i);
-            tab.setAttribute('aria-selected', active ? 'true' : 'false');
-            tab.tabIndex = active ? 0 : -1;
-          });
-          if (fromUser) pauseAutoplay();
-        };
-
-        if (reduceMotion) {
-          apply();
-          return;
-        }
-
-        locked = true;
-        panel.classList.add('is-leaving');
-        window.setTimeout(() => {
-          apply();
-          panel.classList.remove('is-leaving');
-          panel.classList.add('is-entering');
-          window.setTimeout(() => {
-            panel.classList.remove('is-entering');
-            locked = false;
-          }, 420);
-        }, 280);
-      }
-
-      function go(delta) {
-        render(index + delta, { fromUser: true });
-      }
-
-      function pauseAutoplay() {
-        if (autoplayId) {
-          clearInterval(autoplayId);
-          autoplayId = null;
-        }
-      }
-
-      function startAutoplay() {
-        if (reduceMotion) return;
-        pauseAutoplay();
-        autoplayId = setInterval(() => render(index + 1), AUTOPLAY_MS);
-      }
-
-      tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          render(Number(tab.dataset.mfStep), { fromUser: true });
-        });
-      });
-
-      root.addEventListener('keydown', (e) => {
-        if (!root.contains(e.target)) return;
-        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-          e.preventDefault();
-          go(1);
-        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-          e.preventDefault();
-          go(-1);
-        } else if (e.key === 'Home') {
-          e.preventDefault();
-          render(0, { fromUser: true });
-        } else if (e.key === 'End') {
-          e.preventDefault();
-          render(steps.length - 1, { fromUser: true });
-        }
-      });
-
-      let touchX = null;
-      const swipeTarget = root.querySelector('.manifesto-right') || root;
-      swipeTarget.addEventListener('touchstart', (e) => {
-        touchX = e.changedTouches[0].clientX;
-      }, { passive: true });
-      swipeTarget.addEventListener('touchend', (e) => {
-        if (touchX == null) return;
-        const dx = e.changedTouches[0].clientX - touchX;
-        touchX = null;
-        if (Math.abs(dx) < 40) return;
-        if (dx < 0) go(1);
-        else go(-1);
-      }, { passive: true });
-
-      root.addEventListener('pointerdown', pauseAutoplay);
-
-      render(0);
-      if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) startAutoplay();
-            else pauseAutoplay();
-          });
-        }, { threshold: 0.35 });
-        io.observe(root);
-      } else {
-        startAutoplay();
-      }
-    })();
-
-    // Solutions interaction
-    document.querySelectorAll('.solution-card').forEach((card) => {
-      card.addEventListener('mouseenter', () => card.classList.add('is-active'));
-      card.addEventListener('mouseleave', () => card.classList.remove('is-active'));
-    });
-
-    // Featured projects
-    (async function () {
-      const el = document.getElementById('featured-projects');
-      try {
-        const res = await AURELIA.api.get('/projects?featured=true');
-        const projects = res.data || [];
-        if (!projects.length) {
-          el.innerHTML = '<div class="empty-state">Nenhum projeto em destaque no momento.</div>';
-          return;
-        }
-        el.innerHTML = projects.slice(0, 3).map((p) => `
-          <article class="project-card">
-            <a href="projetos/${p.slug}" class="project-card-visual" style="text-decoration:none;color:inherit" data-track="portfolio_view" data-track-label="${p.slug}">${p.title}</a>
-            <div class="project-card-body">
-              <p class="project-card-cat">${p.category || ''}</p>
-              <h3>${p.title}</h3>
-              <p>${p.summary || ''}</p>
-              <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.75rem">
-                <a href="projetos/${p.slug}" class="project-card-link">Ver caso →</a>
-                ${p.external_url ? `<a href="${p.external_url}" class="project-card-link" target="_blank" rel="noopener noreferrer">Ver ao vivo ↗</a>` : ''}
-              </div>
-            </div>
-          </article>
-        `).join('');
-      } catch (e) {
-        el.innerHTML = '<div class="empty-state">Não foi possível carregar os projetos.</div>';
-      }
-    })();
-
-    // Plans
-    (async function () {
-      const el = document.getElementById('home-plans');
-      try {
-        const res = await AURELIA.api.get('/plans');
-        const plans = res.data || [];
-        if (!plans.length) {
-          el.innerHTML = '<div class="empty-state">Nenhum plano disponível.</div>';
-          return;
-        }
-        el.innerHTML = plans.map((p) => `
-          <div class="plan-card ${p.is_featured ? 'is-featured' : ''}">
-            <p class="plan-name">${p.name}</p>
-            <h3>${p.tagline || p.name}</h3>
-            <p class="plan-tagline">${p.description || ''}</p>
-            <p class="plan-price">${p.price_label || 'Sob consulta'}</p>
-            <a href="/contato.html?plano=${encodeURIComponent(p.slug)}" class="btn btn-secondary" data-track="plan_view" data-track-label="${p.slug}">${p.cta_label || 'Falar com a AURELIA'}</a>
-          </div>
-        `).join('');
-      } catch (e) {
-        el.innerHTML = '<div class="empty-state">Não foi possível carregar os planos.</div>';
-      }
-    })();
-
-    // FAQ
-    (async function () {
-      const el = document.getElementById('home-faq');
-      try {
-        const res = await AURELIA.api.get('/faqs');
-        const faqs = (res.data || []).slice(0, 4);
-        if (!faqs.length) {
-          el.innerHTML = '<div class="empty-state">Nenhuma pergunta disponível.</div>';
-          return;
-        }
-        el.innerHTML = faqs.map((f, i) => `
-          <div class="faq-item" data-faq>
-            <button type="button" class="faq-question" aria-expanded="false">${f.question}</button>
-            <div class="faq-answer">${f.answer}</div>
-          </div>
-        `).join('');
-        el.querySelectorAll('[data-faq]').forEach((item) => {
-          const btn = item.querySelector('.faq-question');
-          btn.addEventListener('click', () => {
-            const open = item.classList.toggle('is-open');
-            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-          });
-        });
-      } catch (e) {
-        el.innerHTML = '<div class="empty-state">Não foi possível carregar o FAQ.</div>';
-      }
-    })();
-  </script>
+<script src="./js/config.js"></script>
+<script src="./js/api.js"></script>
+<script src="./js/analytics.js"></script>
+<script src="./js/senna-home.js"></script>
 </body>
 </html>

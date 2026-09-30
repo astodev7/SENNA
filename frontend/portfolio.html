@@ -3,133 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfólio — AURELIA</title>
-  <meta name="description" content="Projetos da AURELIA: web, sistemas, automação e inteligência artificial.">
-  <link rel="canonical" href="https://www.aurelia.com.br/portfolio.html">
-  <meta property="og:title" content="Portfólio — AURELIA">
-  <meta property="og:description" content="Projetos de web, sistemas, automação e IA.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#F6F7F5">
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <title>Portfólio — SENNA</title>
+  <meta name="description" content="Projetos da SENNA.">
+  <meta name="theme-color" content="#080908">
+  <link rel="icon" href="./assets/icons/senna-favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/home.css">
-  <style>
-    .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0; }
-    .filter-btn {
-      padding: 0.5rem 1rem; font-size: 0.8125rem; letter-spacing: 0.04em;
-      text-transform: uppercase; border: 1px solid var(--border); color: var(--fg-muted);
-      transition: border-color 0.15s, color 0.15s, background 0.15s;
-    }
-    .filter-btn:hover, .filter-btn.is-active {
-      border-color: var(--fg); color: var(--fg); background: var(--bg-elevated);
-    }
-    .page-hero { padding: 4rem 0 2rem; border-bottom: 1px solid var(--border); }
-  </style>
-  <script src="js/theme.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/senna-home.css?v=8.4">
+  <link rel="stylesheet" href="./css/senna-pages.css?v=2">
 </head>
-<body>
-  <a class="skip-link" href="#main">Ir para o conteúdo</a>
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="nav-logo">AURELIA</a>
-      <nav class="nav-links" aria-label="Principal">
-        <a href="solucoes.html">Soluções</a>
-        <a href="portfolio.html" aria-current="page">Portfólio</a>
-        <a href="planos.html">Planos</a>
-        <a href="processo.html">Processo</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contato.html" class="nav-cta" style="margin-top:0.5rem">Falar com a AURELIA</a>
-      </nav>
-      <div class="nav-actions">
-        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Alternar tema">◐</button>
-        <a href="contato.html" class="nav-cta nav-cta-desktop">Falar com a AURELIA</a>
-        <button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-  <main id="main">
-    <div class="page-hero">
-      <div class="container">
-        <p class="section-label">Portfólio</p>
-        <h1>Projetos</h1>
-        <p class="section-lead" style="margin-top:1rem">Casos que demonstram arquitetura, clareza e engenharia aplicada.</p>
-      </div>
-    </div>
-    <section class="section">
-      <div class="container">
-        <div class="filters" role="group" aria-label="Filtrar por categoria">
-          <button type="button" class="filter-btn is-active" data-filter="Todos">Todos</button>
-          <button type="button" class="filter-btn" data-filter="Web">Web</button>
-          <button type="button" class="filter-btn" data-filter="Sistemas">Sistemas</button>
-          <button type="button" class="filter-btn" data-filter="Automação">Automação</button>
-          <button type="button" class="filter-btn" data-filter="IA">IA</button>
-          <button type="button" class="filter-btn" data-filter="E-commerce">E-commerce</button>
-        </div>
-        <div class="projects-grid" id="portfolio-grid">
-          <div class="loading">Carregando projetos…</div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-bottom" style="border:none;padding-top:0">
-        <span>© <span id="year"></span> AURELIA</span>
-        <a href="contato.html">Contato</a>
+<body class="senna senna-pages">
+<a class="skip" href="#main">Ir para o conteúdo</a>
+
+<header class="site-header" id="site-header"><div class="container nav"><a href="./index.html" class="nav-logo" aria-label="SENNA — página inicial">SENNA</a><nav class="nav-links" id="nav-links" aria-label="Principal"><a href="./solucoes.html">Soluções</a><a href="./portfolio.html" aria-current="page">Portfólio</a><a href="./processo.html">Processo</a><a href="./sobre.html">Sobre</a><a href="./faq.html">FAQ</a><a href="./contato.html" class="nav-cta-m">Falar com a SENNA</a></nav><div class="nav-actions"><a href="./contato.html" class="nav-cta">Falar com a SENNA</a><button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button></div></div></header>
+
+<main id="main">
+<section class="page-hero container">
+  <p class="label-mono">Portfólio</p>
+  <h1 class="display-lg">Projetos que mudaram a operação de quem os usa.</h1>
+  <p class="lead">Explore os projetos por área e conheça o contexto, as decisões e o resultado de cada trabalho.</p>
+</section>
+<section class="section container" style="padding-top:0">
+  <div class="filters" id="filters">
+    <button type="button" class="filter active" data-filter="Todos">Todos</button>
+    <button type="button" class="filter" data-filter="Web">Web</button>
+    <button type="button" class="filter" data-filter="Sistemas">Sistemas</button>
+    <button type="button" class="filter" data-filter="Automação">Automação</button>
+    <button type="button" class="filter" data-filter="IA">IA</button>
+    <button type="button" class="filter" data-filter="E-commerce">E-commerce</button>
+  </div>
+  <p class="count" id="count"></p>
+  <div class="board board-3" id="list"><div class="muted" style="padding:2rem">Carregando…</div></div>
+</section>
+</main>
+
+<footer class="final" aria-label="Rodapé">
+    <div class="wrap">
+      <p class="tiny">Have a project?</p>
+      <h2 class="display">Vamos construir o que vem depois.</h2>
+      <a class="btn-ivory" href="./contato.html" data-track="cta_click" data-track-label="cta_final">Iniciar um projeto ↗</a>
+      <div class="final-info">
+        <span>SENNA — Technology &amp; Strategy</span>
+        <a href="mailto:contato@aurelia.exemplo">contato@aurelia.exemplo</a>
+        <span>São Paulo, Brasil</span>
+        <span class="grow"></span>
+        <a href="./privacidade.html">Privacidade</a>
+        <a href="./termos.html">Termos</a>
+        <a href="./cookies.html">Cookies</a>
+        <span>© <span data-year></span> SENNA</span>
       </div>
     </div>
   </footer>
-  <script src="js/config.js"></script>
-  <script src="js/api.js"></script>
-  <script src="js/nav.js"></script>
-  <script src="js/analytics.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const grid = document.getElementById('portfolio-grid');
-    function render(list) {
-      if (!list.length) {
-        grid.innerHTML = '<div class="empty-state">Nenhum projeto encontrado.</div>';
-        return;
-      }
-      grid.innerHTML = list.map((p) => `
-        <article class="project-card">
-          <a href="projetos/${p.slug}" class="project-card-visual" data-track="portfolio_view" data-track-label="${p.slug}" style="text-decoration:none;color:inherit">${p.title}</a>
-          <div class="project-card-body">
-            <p class="project-card-cat">${p.category || ''}</p>
-            <h3>${p.title}</h3>
-            <p>${p.summary || ''}</p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.75rem">
-              <a href="projetos/${p.slug}" class="project-card-link">Ver caso →</a>
-              ${p.external_url ? `<a href="${p.external_url}" class="project-card-link" target="_blank" rel="noopener noreferrer">Ver ao vivo ↗</a>` : ''}
-            </div>
-          </div>
-        </article>
-      `).join('');
-    }
-    async function load(category) {
-      grid.innerHTML = '<div class="loading">Carregando…</div>';
-      try {
-        const q = category && category !== 'Todos' ? '?category=' + encodeURIComponent(category) : '';
-        const res = await AURELIA.api.get('/projects' + q);
-        render(res.data || []);
-      } catch {
-        grid.innerHTML = '<div class="empty-state">Não foi possível carregar os projetos.</div>';
-      }
-    }
-    document.querySelectorAll('.filter-btn').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('is-active'));
-        btn.classList.add('is-active');
-        load(btn.dataset.filter);
-      });
-    });
-    load('Todos');
-  </script>
-</body>
-</html>
+<script src="./js/config.js"></script>
+<script src="./js/api.js"></script>
+
+<script src="./js/nav.js"></script>
+<script src="./js/analytics.js"></script>
+<script>document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());</script>
+
+<script>
+(async function(){
+  const list=document.getElementById('list'), count=document.getElementById('count');
+  function esc(value) { return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+  function card(p){
+    const y=p.created_at?new Date(p.created_at).getFullYear():'';
+    const techs=(p.technologies||[]).slice(0,4).map(t=>'<span>'+esc(t)+'</span>').join('');
+    const image=/^(https?:\/\/|\/|\.\/)/i.test(p.cover_image||'')?p.cover_image:'';
+    const media=image?'<img src="'+esc(image)+'" alt="" loading="lazy" decoding="async">':'<span>'+esc(p.category||'Projeto')+'</span>';
+    return '<a class="project-card" href="projetos/'+encodeURIComponent(p.slug)+'"><figure class="project-cover">'+media+'</figure><div class="top"><span class="meta">'+esc(p.category||'')+(y?' / '+y:'')+'</span><span>↗</span></div><h3>'+esc(p.title)+'</h3><p class="sum">'+esc(p.summary||'')+'</p><div class="techs">'+techs+'</div></a>';
+  }
+  async function load(cat){
+    list.innerHTML='<div class="muted" style="padding:2rem">Carregando…</div>';
+    try{
+      const q=cat&&cat!=='Todos'?'?category='+encodeURIComponent(cat):'';
+      const res=await AURELIA.api.get('/projects'+q);
+      const data=res.data||[];
+      count.textContent=data.length+(data.length===1?' projeto':' projetos');
+      list.innerHTML=data.length?data.map(card).join(''):'<div class="muted" style="padding:2rem">Nenhum projeto nesta categoria.</div>';
+    }catch{ list.innerHTML='<div class="muted" style="padding:2rem">Não foi possível carregar os projetos agora.</div>'; }
+  }
+  document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('[data-filter]').forEach(x=>x.classList.remove('active')); b.classList.add('active'); load(b.dataset.filter);
+  }));
+  load('Todos');
+})();
+</script></body></html>

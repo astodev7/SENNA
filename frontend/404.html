@@ -3,50 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Página não encontrada — AURELIA</title>
+  <title>Página não encontrada — SENNA</title>
   <meta name="description" content="A página solicitada não existe.">
   <link rel="canonical" href="https://www.aurelia.com.br/404.html">
-  <meta name="theme-color" content="#F6F7F5">
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/home.css">
-  <style>.page-hero{padding:4rem 0 2rem;border-bottom:1px solid var(--border)}</style>
-  <script src="js/theme.js"></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <meta name="theme-color" content="#080908">
+  <link rel="icon" href="./assets/icons/senna-favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
   
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="nav-logo">AURELIA</a>
-      <nav class="nav-links" aria-label="Principal">
-        <a href="solucoes.html">Soluções</a>
-        <a href="portfolio.html">Portfólio</a>
-        <a href="planos.html">Planos</a>
-        <a href="processo.html">Processo</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contato.html" class="nav-cta" style="margin-top:0.5rem">Falar com a AURELIA</a>
-      </nav>
-      <div class="nav-actions">
-        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Tema">◐</button>
-        <a href="contato.html" class="nav-cta nav-cta-desktop">Falar com a AURELIA</a>
-        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
+  
+<link rel="stylesheet" href="./css/senna-home.css?v=8.4">
+<link rel="stylesheet" href="./css/senna-pages.css?v=2">
+</head>
+<body class="senna senna-pages">
+  <a class="skip" href="#main">Ir para o conteúdo</a>
+  
+  <header class="site-header" id="site-header"><div class="container nav"><a href="./index.html" class="nav-logo" aria-label="SENNA — página inicial">SENNA</a><nav class="nav-links" id="nav-links" aria-label="Principal"><a href="./solucoes.html">Soluções</a><a href="./portfolio.html">Portfólio</a><a href="./processo.html">Processo</a><a href="./sobre.html">Sobre</a><a href="./faq.html">FAQ</a><a href="./contato.html" class="nav-cta-m">Falar com a SENNA</a></nav><div class="nav-actions"><a href="./contato.html" class="nav-cta">Falar com a SENNA</a><button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button></div></div></header>
 
   <main id="main">
-    <section class="section"><div class="container" style="text-align:center;padding:6rem 0">
+    <section class="section page-404"><div class="container" style="text-align:center;padding:6rem 0">
       <h1>404</h1>
       <p style="color:var(--fg-muted);margin:1rem 0 2rem">Página não encontrada.</p>
       <a href="index.html" class="btn btn-primary">Voltar ao início</a>
     </div></section>
   </main>
-  <footer class="site-footer"><div class="container"><div class="footer-bottom" style="border:none;padding-top:0"><span>© AURELIA</span></div></div></footer>
+  <footer class="final" aria-label="Rodapé">
+    <div class="wrap">
+      <p class="tiny">Have a project?</p>
+      <h2 class="display">Vamos construir o que vem depois.</h2>
+      <a class="btn-ivory" href="./contato.html" data-track="cta_click" data-track-label="cta_final">Iniciar um projeto ↗</a>
+      <div class="final-info">
+        <span>SENNA — Technology &amp; Strategy</span>
+        <a href="mailto:contato@aurelia.exemplo">contato@aurelia.exemplo</a>
+        <span>São Paulo, Brasil</span>
+        <span class="grow"></span>
+        <a href="./privacidade.html">Privacidade</a>
+        <a href="./termos.html">Termos</a>
+        <a href="./cookies.html">Cookies</a>
+        <span>© <span data-year></span> SENNA</span>
+      </div>
+    </div>
+  </footer>
   <script src="js/config.js"></script>
   <script src="js/api.js"></script>
   <script src="js/nav.js"></script>

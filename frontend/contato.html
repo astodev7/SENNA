@@ -3,161 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contato — AURELIA</title>
-  <meta name="description" content="Fale com a AURELIA. Conte o contexto do seu projeto.">
-  <link rel="canonical" href="https://www.aurelia.com.br/contato.html">
-  <meta property="og:title" content="Contato — AURELIA">
-  <meta property="og:description" content="Fale com a AURELIA sobre o seu projeto.">
-  <meta name="theme-color" content="#F6F7F5">
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/home.css">
-  <style>
-    .page-hero { padding: 4rem 0 2rem; border-bottom: 1px solid var(--border); }
-    .contact-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; margin-top: 2rem; }
-    @media (max-width: 800px) { .contact-layout { grid-template-columns: 1fr; } }
-  </style>
-  <script src="js/theme.js"></script>
+  <title>Contato — SENNA</title>
+  <meta name="description" content="Fale com a SENNA.">
+  <meta name="theme-color" content="#080908">
+  <link rel="icon" href="./assets/icons/senna-favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/senna-home.css?v=8.4">
+  <link rel="stylesheet" href="./css/senna-pages.css?v=2">
 </head>
-<body>
-  <a class="skip-link" href="#main">Ir para o conteúdo</a>
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="nav-logo">AURELIA</a>
-      <nav class="nav-links" aria-label="Principal">
-        <a href="solucoes.html">Soluções</a>
-        <a href="portfolio.html">Portfólio</a>
-        <a href="planos.html">Planos</a>
-        <a href="processo.html">Processo</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contato.html" class="nav-cta" aria-current="page" style="margin-top:0.5rem">Falar com a AURELIA</a>
-      </nav>
-      <div class="nav-actions">
-        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Alternar tema">◐</button>
-        <a href="contato.html" class="nav-cta nav-cta-desktop">Falar com a AURELIA</a>
-        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<body class="senna senna-pages">
+<a class="skip" href="#main">Ir para o conteúdo</a>
+
+<header class="site-header" id="site-header"><div class="container nav"><a href="./index.html" class="nav-logo" aria-label="SENNA — página inicial">SENNA</a><nav class="nav-links" id="nav-links" aria-label="Principal"><a href="./solucoes.html">Soluções</a><a href="./portfolio.html">Portfólio</a><a href="./processo.html">Processo</a><a href="./sobre.html">Sobre</a><a href="./faq.html">FAQ</a><a href="./contato.html" class="nav-cta-m">Falar com a SENNA</a></nav><div class="nav-actions"><a href="./contato.html" class="nav-cta">Falar com a SENNA</a><button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button></div></div></header>
+
+<main id="main">
+<section class="page-hero container">
+  <p class="label-mono">Contato</p>
+  <h1 class="display-lg">Uma conversa técnica. Sem pitch genérico.</h1>
+  <p class="lead">Descreva o problema e o contexto. Entraremos em contato para entender o próximo passo.</p>
+</section>
+<section class="section container" style="padding-top:0">
+  <div class="contact-grid">
+    <aside>
+      <p class="muted">Quanto mais concreto (sistemas, volume, o que já foi tentado), mais útil a primeira conversa.</p>
+      <p class="label-mono" style="margin-top:1.75rem">E-mail</p>
+      <p><a href="mailto:contato@aurelia.exemplo">contato@aurelia.exemplo</a></p>
+      <p class="label-mono" style="margin-top:1.25rem">O que acontece depois</p>
+      <p class="muted" style="font-size:.9rem;line-height:1.5">1. Recebemos sua mensagem<br>2. Avaliamos encaixe técnico<br>3. Respondemos com próximo passo ou com um “não há projeto agora”</p>
+    </aside>
+    <form class="form" id="contact-form" novalidate>
+      <div class="form-2">
+        <div class="field"><label for="name">Nome</label><input id="name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+      </div>
+      <div class="form-2">
+        <div class="field"><label for="company">Empresa</label><input id="company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="phone">Telefone</label><input id="phone" name="phone" autocomplete="tel"></div>
+      </div>
+      <div class="field"><label for="project_type">Tipo de projeto</label>
+        <select id="project_type" name="project_type">
+          <option value="">Selecione</option>
+          <option>Site institucional</option><option>Automação de processos</option><option>Sistema interno</option>
+          <option>Integrações</option><option>Inteligência Artificial</option><option>Dados e dashboards</option><option>Outro</option>
+        </select>
+      </div>
+      <div class="field"><label for="message">Mensagem</label><textarea id="message" name="message" required placeholder="Contexto, sistemas envolvidos e o que precisa mudar."></textarea></div>
+      <div class="field"><label><input type="checkbox" name="lgpd" required style="width:auto;margin-right:.5rem"> Concordo com o tratamento dos dados conforme a Política de Privacidade.</label></div>
+      <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+      <p class="label-mono" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="final" aria-label="Rodapé">
+    <div class="wrap">
+      <p class="tiny">Have a project?</p>
+      <h2 class="display">Vamos construir o que vem depois.</h2>
+      <a class="btn-ivory" href="./contato.html" data-track="cta_click" data-track-label="cta_final">Iniciar um projeto ↗</a>
+      <div class="final-info">
+        <span>SENNA — Technology &amp; Strategy</span>
+        <a href="mailto:contato@aurelia.exemplo">contato@aurelia.exemplo</a>
+        <span>São Paulo, Brasil</span>
+        <span class="grow"></span>
+        <a href="./privacidade.html">Privacidade</a>
+        <a href="./termos.html">Termos</a>
+        <a href="./cookies.html">Cookies</a>
+        <span>© <span data-year></span> SENNA</span>
       </div>
     </div>
-  </header>
-  <main id="main">
-    <div class="page-hero">
-      <div class="container">
-        <p class="section-label">Contato</p>
-        <h1>Falar com a AURELIA</h1>
-        <p class="section-lead" style="margin-top:1rem">Descreva o contexto. Respondemos com clareza sobre encaixe e próximos passos.</p>
-      </div>
-    </div>
-    <section class="section">
-      <div class="container contact-layout">
-        <div>
-          <h2 style="font-size:1.25rem;margin-bottom:1rem">O que ajuda na mensagem</h2>
-          <ul style="color:var(--fg-muted);font-size:0.9375rem;line-height:1.8">
-            <li>— Tipo de projeto ou problema</li>
-            <li>— Contexto do negócio</li>
-            <li>— Prazo aproximado</li>
-            <li>— Orçamento estimado (se houver)</li>
-          </ul>
-        </div>
-        <form id="contact-form" novalidate>
-          <div class="honeypot" aria-hidden="true">
-            <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Nome *</label>
-              <input type="text" id="name" name="name" required maxlength="255" autocomplete="name">
-            </div>
-            <div class="form-group">
-              <label for="company">Empresa</label>
-              <input type="text" id="company" name="company" maxlength="255" autocomplete="organization">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">E-mail *</label>
-              <input type="email" id="email" name="email" required maxlength="255" autocomplete="email">
-            </div>
-            <div class="form-group">
-              <label for="phone">Telefone</label>
-              <input type="tel" id="phone" name="phone" maxlength="50" autocomplete="tel">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="project_type">Tipo de projeto</label>
-              <select id="project_type" name="project_type">
-                <option value="">Selecione</option>
-                <option value="Web">Web / Site</option>
-                <option value="Sistema">Sistema</option>
-                <option value="Automação">Automação</option>
-                <option value="IA">Inteligência Artificial</option>
-                <option value="Integração">Integração</option>
-                <option value="Outro">Outro</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="budget">Orçamento</label>
-              <select id="budget" name="budget">
-                <option value="">Selecione</option>
-                <option value="A definir">A definir</option>
-                <option value="Até 20k">Até R$ 20 mil</option>
-                <option value="20k-50k">R$ 20–50 mil</option>
-                <option value="50k-100k">R$ 50–100 mil</option>
-                <option value="100k+">Acima de R$ 100 mil</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Mensagem *</label>
-            <textarea id="message" name="message" required maxlength="5000" rows="5"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" id="submit-btn">Enviar mensagem</button>
-          <div id="form-feedback" hidden></div>
-        </form>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer"><div class="container"><div class="footer-bottom" style="border:none;padding-top:0"><span>© AURELIA</span></div></div></footer>
-  <script src="js/config.js"></script>
-  <script src="js/api.js"></script>
-  <script src="js/nav.js"></script>
-  <script src="js/analytics.js"></script>
-  <script>
-    const params = new URLSearchParams(location.search);
-    if (params.get('plano')) {
-      const sel = document.getElementById('project_type');
-      // leave as is; message can mention plan
+  </footer>
+<script src="./js/config.js"></script>
+<script src="./js/api.js"></script>
+
+<script src="./js/nav.js"></script>
+<script src="./js/analytics.js"></script>
+<script>document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());</script>
+
+<script>
+(function(){
+  const form=document.getElementById('contact-form');
+  const status=document.getElementById('form-status');
+  const params=new URLSearchParams(location.search);
+  const plano=params.get('plano');
+  const frente=params.get('frente');
+  if(frente && form.message && !form.message.value) form.message.value='Interesse na frente: '+frente;
+  else if(plano && form.message && !form.message.value) form.message.value='Interesse no plano: '+plano;
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+    status.textContent='Enviando…';
+    const data=Object.fromEntries(new FormData(form).entries());
+    data.lgpd = !!form.lgpd?.checked;
+    try{
+      await AURELIA.api.post('/contact', data);
+      status.textContent='Mensagem enviada. Retornamos em breve.';
+      form.reset();
+    }catch(err){
+      status.textContent='Não foi possível enviar. Tente de novo ou use o e-mail.';
     }
-    const form = document.getElementById('contact-form');
-    const feedback = document.getElementById('form-feedback');
-    const btn = document.getElementById('submit-btn');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      feedback.hidden = true;
-      btn.disabled = true;
-      btn.textContent = 'Enviando…';
-      if (window.AURELIA?.analytics) AURELIA.analytics.track('contact_started');
-      const data = Object.fromEntries(new FormData(form));
-      try {
-        await AURELIA.api.post('/contact', data);
-        feedback.className = 'form-message success';
-        feedback.textContent = 'Mensagem recebida. Entraremos em contato em breve.';
-        feedback.hidden = false;
-        form.reset();
-        if (window.AURELIA?.analytics) AURELIA.analytics.track('contact_submitted');
-      } catch (err) {
-        feedback.className = 'form-message error';
-        feedback.textContent = err.message || 'Não foi possível enviar. Tente novamente.';
-        feedback.hidden = false;
-      } finally {
-        btn.disabled = false;
-        btn.textContent = 'Enviar mensagem';
-      }
-    });
-  </script>
-</body>
-</html>
+  });
+})();
+</script></body></html>

@@ -3,59 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Soluções — AURELIA</title>
-  <meta name="description" content="Capacidades da AURELIA: automação, IA, sistemas, integrações, experiências digitais e dados.">
-  <link rel="canonical" href="https://www.aurelia.com.br/solucoes.html">
-  <meta name="theme-color" content="#F6F7F5">
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/home.css">
-  <style>.page-hero{padding:4rem 0 2rem;border-bottom:1px solid var(--border)}</style>
-  <script src="js/theme.js"></script>
+  <title>Soluções — SENNA</title>
+  <meta name="description" content="Seis frentes de atuação da SENNA: automação, IA, sistemas, integrações, experiências digitais e dados.">
+  <meta name="theme-color" content="#080908">
+  <link rel="icon" href="./assets/icons/senna-favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/senna-home.css?v=8.4">
+  <link rel="stylesheet" href="./css/senna-pages.css?v=2">
 </head>
-<body>
-  <a class="skip-link" href="#main">Ir para o conteúdo</a>
-  
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="nav-logo">AURELIA</a>
-      <nav class="nav-links" aria-label="Principal">
-        <a href="solucoes.html">Soluções</a>
-        <a href="portfolio.html">Portfólio</a>
-        <a href="planos.html">Planos</a>
-        <a href="processo.html">Processo</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contato.html" class="nav-cta" style="margin-top:0.5rem">Falar com a AURELIA</a>
+<body class="senna senna-pages">
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<header class="site-header" id="site-header"><div class="container nav"><a href="./index.html" class="nav-logo" aria-label="SENNA — página inicial">SENNA</a><nav class="nav-links" id="nav-links" aria-label="Principal"><a href="./solucoes.html" aria-current="page">Soluções</a><a href="./portfolio.html">Portfólio</a><a href="./processo.html">Processo</a><a href="./sobre.html">Sobre</a><a href="./faq.html">FAQ</a><a href="./contato.html" class="nav-cta-m">Falar com a SENNA</a></nav><div class="nav-actions"><a href="./contato.html" class="nav-cta">Falar com a SENNA</a><button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button></div></div></header>
+
+<main id="main">
+  <section class="page-hero container">
+    <p class="label-mono">Soluções</p>
+    <h1 class="display-lg">Seis frentes, uma engenharia.</h1>
+    <p class="lead">Cada frente resolve um tipo específico de problema. A maioria dos projetos combina duas ou três.</p>
+  </section>
+  <section class="section container" style="padding-top:0">
+    <div class="solutions-shell">
+      <nav class="solutions-nav" aria-label="Frentes de solução">
+        <button type="button" class="is-active" data-sol="automacao" aria-pressed="true"><span class="idx">01</span> Automação</button>
+<button type="button" class="" data-sol="ia" aria-pressed="false"><span class="idx">02</span> Inteligência Artificial</button>
+<button type="button" class="" data-sol="sistemas" aria-pressed="false"><span class="idx">03</span> Sistemas</button>
+<button type="button" class="" data-sol="integracoes" aria-pressed="false"><span class="idx">04</span> Integrações</button>
+<button type="button" class="" data-sol="experiencias" aria-pressed="false"><span class="idx">05</span> Experiências digitais</button>
+<button type="button" class="" data-sol="dados" aria-pressed="false"><span class="idx">06</span> Dados</button>
       </nav>
-      <div class="nav-actions">
-        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Tema">◐</button>
-        <a href="contato.html" class="nav-cta nav-cta-desktop">Falar com a AURELIA</a>
-        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="solutions-panel" id="solutions-panel" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="combos-section">
+    <div class="container">
+      <div class="combos-layout">
+        <p class="combos-label">Combinações</p>
+        <div class="combos-copy">
+          <h2 class="display-lg">A maioria dos projetos<br>usa mais de uma frente.</h2>
+          <p class="intro">Um sistema interno sem integração vira ilha. Uma automação sem dados não é auditável. Combinamos frentes quando o problema exige.</p>
+        </div>
+      </div>
+      <div class="combos-grid">
+        <article class="combo-card">
+          <h3>Sistemas + Integrações</h3>
+          <p>Operação com ERP legado que precisa de interface própria.</p>
+        </article>
+        <article class="combo-card">
+          <h3>Automação + IA</h3>
+          <p>Triagem documental com decisão humana no final da fila.</p>
+        </article>
+        <article class="combo-card">
+          <h3>Web + Dados</h3>
+          <p>Presença digital instrumentada para medir funil real.</p>
+        </article>
       </div>
     </div>
-  </header>
-
-  <main id="main">
-    <div class="page-hero"><div class="container"><p class="section-label">Soluções</p><h1>O que construímos</h1></div></div>
-    <section class="section"><div class="container">
-      <div class="solutions-grid">
-        <article class="solution-card"><p class="solution-num">01</p><h3>Automação</h3><p>Processos repetitivos transformados em fluxos estáveis.</p></article>
-        <article class="solution-card"><p class="solution-num">02</p><h3>Inteligência Artificial</h3><p>IA integrada a fluxos e produtos.</p></article>
-        <article class="solution-card"><p class="solution-num">03</p><h3>Sistemas</h3><p>Plataformas e sistemas internos sob medida.</p></article>
-        <article class="solution-card"><p class="solution-num">04</p><h3>Integrações</h3><p>APIs e ferramentas conectadas.</p></article>
-        <article class="solution-card"><p class="solution-num">05</p><h3>Experiências digitais</h3><p>Sites e produtos de alto desempenho.</p></article>
-        <article class="solution-card"><p class="solution-num">06</p><h3>Dados</h3><p>Dashboards, estruturas e pipelines.</p></article>
+  </section>
+  <section class="section section-invert">
+    <div class="container cta-row">
+      <div>
+        <h2 class="display-lg">Não sabe por onde começar?</h2>
+        <p>Uma conversa técnica para identificar a frente certa — ou se ainda não há projeto.</p>
       </div>
-    </div></section>
-  </main>
-  <footer class="site-footer"><div class="container"><div class="footer-bottom" style="border:none;padding-top:0"><span>© AURELIA</span></div></div></footer>
-  <script src="js/config.js"></script>
-  <script src="js/api.js"></script>
-  <script src="js/nav.js"></script>
-  <script src="js/analytics.js"></script>
-</body>
-</html>
+      <a class="btn btn-invert" href="contato.html">Falar com a SENNA</a>
+    </div>
+  </section>
+</main>
+
+<footer class="final" aria-label="Rodapé">
+    <div class="wrap">
+      <p class="tiny">Have a project?</p>
+      <h2 class="display">Vamos construir o que vem depois.</h2>
+      <a class="btn-ivory" href="./contato.html" data-track="cta_click" data-track-label="cta_final">Iniciar um projeto ↗</a>
+      <div class="final-info">
+        <span>SENNA — Technology &amp; Strategy</span>
+        <a href="mailto:contato@aurelia.exemplo">contato@aurelia.exemplo</a>
+        <span>São Paulo, Brasil</span>
+        <span class="grow"></span>
+        <a href="./privacidade.html">Privacidade</a>
+        <a href="./termos.html">Termos</a>
+        <a href="./cookies.html">Cookies</a>
+        <span>© <span data-year></span> SENNA</span>
+      </div>
+    </div>
+  </footer>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+
+<script src="js/nav.js"></script>
+<script src="js/analytics.js"></script>
+<script>document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());</script>
+
+<script>
+const SOLUTIONS = [{"id": "automacao", "index": "01", "title": "Automação", "short": "Automação de processos repetitivos.", "body": "Mapeamos o trabalho manual que se repete todos os dias e o transformamos em fluxo automático, com regras explícitas, registro de execução e ponto de intervenção humana onde ele importa.", "deliverables": ["Mapeamento de processo", "Motor de regras", "Execuções agendadas", "Registro auditável"]}, {"id": "ia", "index": "02", "title": "Inteligência Artificial", "short": "IA integrada a fluxos e produtos.", "body": "IA aplicada como componente de um processo: extração de informação, classificação, triagem e apoio à decisão — sempre com revisão humana nas etapas sensíveis.", "deliverables": ["Extração estruturada", "Classificação e triagem", "Apoio à decisão", "Avaliação contínua"]}, {"id": "sistemas", "index": "03", "title": "Sistemas", "short": "Sistemas internos e plataformas sob medida.", "body": "Quando a operação não cabe em um software de prateleira, construímos o sistema: modelo de dados próprio, controle de acesso por papel e interface feita para quem usa oito horas por dia.", "deliverables": ["Modelagem de dados", "Controle de acesso", "Interfaces operacionais", "Documentação técnica"]}, {"id": "integracoes", "index": "04", "title": "Integrações", "short": "APIs, sistemas e ferramentas conectadas.", "body": "Conectamos o que já existe: ERPs, CRMs, ferramentas internas e serviços externos, com contratos de API claros, tratamento de falha e observabilidade.", "deliverables": ["APIs REST", "Webhooks", "Sincronização de dados", "Tratamento de falhas"]}, {"id": "experiencias", "index": "05", "title": "Experiências digitais", "short": "Sites e produtos digitais de alto desempenho.", "body": "Presença digital construída como produto: arquitetura de informação, texto próprio, desempenho medido e SEO técnico desde a primeira linha.", "deliverables": ["Arquitetura de informação", "Design sob medida", "SEO técnico", "Performance medida"]}, {"id": "dados", "index": "06", "title": "Dados", "short": "Dashboards, estruturas e pipelines.", "body": "Estruturas de dados que sustentam decisão: ingestão confiável, modelagem consistente e painéis que respondem perguntas específicas do negócio.", "deliverables": ["Pipelines de ingestão", "Modelagem analítica", "Painéis operacionais", "Qualidade de dados"]}];
+function renderSol(id) {
+  const s = SOLUTIONS.find(x => x.id === id) || SOLUTIONS[0];
+  document.querySelectorAll('.solutions-nav button').forEach(b => {
+    const on = b.dataset.sol === s.id;
+    b.classList.toggle('is-active', on);
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+  const deliv = s.deliverables.map(d => '<span>' + d + '</span>').join('');
+  document.getElementById('solutions-panel').innerHTML =
+    '<p class="eyebrow">' + s.index + ' / SOLUÇÃO</p>' +
+    '<h2 class="display-lg">' + s.title + '</h2>' +
+    '<p class="short">' + s.short + '</p>' +
+    '<p class="body">' + s.body + '</p>' +
+    '<p class="deliv-label">Entregáveis típicos</p>' +
+    '<div class="deliv-grid">' + deliv + '</div>' +
+    '<a class="btn btn-primary" href="contato.html?frente=' + encodeURIComponent(s.id) + '">Discutir esta frente →</a>';
+}
+document.querySelectorAll('.solutions-nav button').forEach(b => {
+  b.addEventListener('click', () => renderSol(b.dataset.sol));
+});
+renderSol(SOLUTIONS[0].id);
+</script>
+</body></html>

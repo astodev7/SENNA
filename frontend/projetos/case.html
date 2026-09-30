@@ -3,90 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projeto — AURELIA</title>
-  <meta name="description" content="Case study AURELIA">
-  <meta name="theme-color" content="#F6F7F5">
-  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/variables.css">
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/layout.css">
-  <link rel="stylesheet" href="../css/home.css">
-  <style>
-    .case-hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--border); }
-    .case-meta { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
-    .case-section { padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
-    .case-section h2 { font-size: 1.25rem; margin-bottom: 1rem; }
-    .case-section p { color: var(--fg-muted); max-width: 40rem; }
-    .tech-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-    .tech-list span { padding: 0.35rem 0.75rem; border: 1px solid var(--border); font-size: 0.8125rem; }
-  </style>
-  <script src="../js/theme.js"></script>
+  <title>Case — SENNA</title>
+  <meta name="theme-color" content="#080908">
+  <link rel="icon" href="../assets/icons/senna-favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/senna-home.css?v=8.4">
+  <link rel="stylesheet" href="../css/senna-pages.css?v=2">
 </head>
-<body>
-  <a class="skip-link" href="#main">Ir para o conteúdo</a>
-  <header class="site-header">
-    <div class="container nav">
-      <a href="../index.html" class="nav-logo">AURELIA</a>
-      <nav class="nav-links" aria-label="Principal">
-        <a href="../solucoes.html">Soluções</a>
-        <a href="../portfolio.html">Portfólio</a>
-        <a href="../planos.html">Planos</a>
-        <a href="../processo.html">Processo</a>
-        <a href="../sobre.html">Sobre</a>
-        <a href="../faq.html">FAQ</a>
-        <a href="../contato.html" class="nav-cta" style="margin-top:0.5rem">Falar com a AURELIA</a>
-      </nav>
-      <div class="nav-actions">
-        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Tema">◐</button>
-        <a href="../contato.html" class="nav-cta nav-cta-desktop">Falar com a AURELIA</a>
-        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<body class="senna senna-pages">
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<header class="site-header" id="site-header"><div class="container nav"><a href="../index.html" class="nav-logo" aria-label="SENNA — página inicial">SENNA</a><nav class="nav-links" id="nav-links" aria-label="Principal"><a href="../solucoes.html">Soluções</a><a href="../portfolio.html">Portfólio</a><a href="../processo.html">Processo</a><a href="../sobre.html">Sobre</a><a href="../faq.html">FAQ</a><a href="../contato.html" class="nav-cta-m">Falar com a SENNA</a></nav><div class="nav-actions"><a href="../contato.html" class="nav-cta">Falar com a SENNA</a><button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button></div></div></header>
+<main id="main"><div id="root" class="container page-hero"><p class="muted">Carregando case…</p></div></main>
+<footer class="final" aria-label="Rodapé">
+    <div class="wrap">
+      <p class="tiny">Have a project?</p>
+      <h2 class="display">Vamos construir o que vem depois.</h2>
+      <a class="btn-ivory" href="../contato.html" data-track="cta_click" data-track-label="cta_final">Iniciar um projeto ↗</a>
+      <div class="final-info">
+        <span>SENNA — Technology &amp; Strategy</span>
+        <a href="mailto:contato@aurelia.exemplo">contato@aurelia.exemplo</a>
+        <span>São Paulo, Brasil</span>
+        <span class="grow"></span>
+        <a href="../privacidade.html">Privacidade</a>
+        <a href="../termos.html">Termos</a>
+        <a href="../cookies.html">Cookies</a>
+        <span>© <span data-year></span> SENNA</span>
       </div>
     </div>
-  </header>
-  <main id="main">
-    <div id="case-content"><div class="loading container" style="padding:4rem 0">Carregando projeto…</div></div>
-  </main>
-  <footer class="site-footer"><div class="container"><div class="footer-bottom" style="border:none;padding-top:0"><span>© AURELIA</span></div></div></footer>
-  <script src="../js/config.js"></script>
-  <script src="../js/api.js"></script>
-  <script src="../js/nav.js"></script>
-  <script src="../js/analytics.js"></script>
-  <script>
-    (async function () {
-      const slug = location.pathname.split('/').filter(Boolean).pop();
-      const el = document.getElementById('case-content');
-      try {
-        const res = await AURELIA.api.get('/projects/' + encodeURIComponent(slug));
-        const p = res.data;
-        document.title = (p.meta_title || p.title + ' — AURELIA');
-        const desc = document.querySelector('meta[name="description"]');
-        if (desc) desc.content = p.meta_description || p.summary || '';
-        const techs = (p.technologies || []).map((t) => '<span>' + t + '</span>').join('');
-        el.innerHTML = `
-          <div class="case-hero"><div class="container">
-            <p class="case-meta">${p.category || ''} · Projeto</p>
-            <h1>${p.title}</h1>
-            <p class="section-lead" style="margin-top:1rem">${p.summary || ''}</p>
-          </div></div>
-          ${p.problem ? `<section class="case-section"><div class="container"><h2>Problema</h2><p>${p.problem}</p></div></section>` : ''}
-          ${p.context ? `<section class="case-section"><div class="container"><h2>Contexto</h2><p>${p.context}</p></div></section>` : ''}
-          ${p.solution ? `<section class="case-section"><div class="container"><h2>Solução</h2><p>${p.solution}</p></div></section>` : ''}
-          ${p.architecture ? `<section class="case-section"><div class="container"><h2>Arquitetura</h2><p>${p.architecture}</p></div></section>` : ''}
-          ${techs ? `<section class="case-section"><div class="container"><h2>Tecnologias</h2><div class="tech-list">${techs}</div></div></section>` : ''}
-          ${p.results ? `<section class="case-section"><div class="container"><h2>Resultados</h2><p>${p.results}</p></div></section>` : ''}
-          ${p.external_url ? `<section class="case-section"><div class="container"><h2>Projeto ao vivo</h2><p><a class="btn btn-primary" href="${p.external_url}" target="_blank" rel="noopener noreferrer">Abrir site ↗</a></p></div></section>` : ''}
-          <section class="cta-final"><div class="container">
-            <h2>Projeto semelhante?</h2>
-            <p>Conte o contexto. Avaliamos encaixe e próximos passos.</p>
-            <a href="../contato.html" class="btn btn-primary">Falar com a AURELIA</a>
-          </div></section>
-        `;
-        if (window.AURELIA?.analytics) AURELIA.analytics.track('portfolio_view', { slug });
-      } catch {
-        el.innerHTML = '<div class="container" style="padding:4rem 0"><div class="empty-state">Projeto não encontrado.</div><p style="margin-top:1rem"><a href="../portfolio.html">Voltar ao portfólio</a></p></div>';
-      }
-    })();
-  </script>
-</body>
-</html>
+  </footer>
+<script src="../js/config.js"></script>
+<script src="../js/api.js"></script>
+
+<script src="../js/nav.js"></script>
+<script>
+document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
+(async function(){
+  const root=document.getElementById('root');
+  let slug=location.pathname.split('/').filter(Boolean).pop()||'';
+  if(slug.endsWith('.html')) slug=new URLSearchParams(location.search).get('slug')||'';
+  if(!slug||slug==='projetos'||slug==='case') slug=new URLSearchParams(location.search).get('slug')||'';
+  if(!slug){ root.innerHTML='<p class="label-mono">Indisponível</p><h1 class="display-lg">Case não encontrado</h1><p style="margin-top:1.5rem"><a class="btn btn-primary" href="../portfolio.html">Portfólio</a></p>'; return; }
+  try{
+    const res=await AURELIA.api.get('/projects/'+encodeURIComponent(slug));
+    const p=res.data;
+    if(!p) throw new Error('nf');
+    document.title=p.title+' — Case SENNA';
+    const techs=(p.technologies||[]).map(t=>'<li class="board-cell" style="font-family:var(--font-mono);font-size:.85rem">'+t+'</li>').join('');
+    root.className='';
+    root.innerHTML=`
+    <section class="container page-hero">
+      <p class="label-mono"><a href="../portfolio.html">Portfólio</a> · ${p.category||'Projeto'}</p>
+      <h1 class="display-lg">${p.title}</h1>
+      <p class="lead">${p.summary||''}</p>
+      ${p.external_url?`<p style="margin-top:1.5rem"><a class="btn btn-outline" href="${p.external_url}" target="_blank" rel="noopener">Ver ao vivo ↗</a></p>`:''}
+    </section>
+    ${p.problem?`<section class="section"><div class="container"><p class="label-mono">Problema</p><h2 class="display-md" style="margin-top:.75rem">O que estava travando</h2><p style="margin-top:1.25rem;font-size:1.05rem;line-height:1.65;max-width:40rem">${p.problem}</p>${p.context?`<p class="muted" style="margin-top:1rem;max-width:40rem">${p.context}</p>`:''}</div></section>`:''}
+    ${p.solution?`<section class="section section-surface"><div class="container"><p class="label-mono">Solução</p><h2 class="display-md" style="margin-top:.75rem">O que construímos</h2><p style="margin-top:1.25rem;font-size:1.05rem;line-height:1.65;max-width:40rem">${p.solution}</p>${p.architecture?`<p class="label-mono" style="margin-top:1.75rem">Arquitetura</p><p class="muted" style="margin-top:.75rem;max-width:40rem">${p.architecture}</p>`:''}</div></section>`:''}
+    ${techs?`<section class="section"><div class="container"><p class="label-mono">Tecnologias</p><h2 class="display-md" style="margin-top:.75rem">Stack</h2><ul class="board board-4" style="margin-top:1.5rem">${techs}</ul></div></section>`:''}
+    ${p.results?`<section class="section section-surface"><div class="container"><p class="label-mono">Resultado</p><h2 class="display-md" style="margin-top:.75rem">O que mudou</h2><p style="margin-top:1.25rem;max-width:40rem;line-height:1.65">${p.results}</p></div></section>`:''}
+    <section class="section section-invert"><div class="container cta-row"><div><h2 class="display-lg">Quer um resultado parecido?</h2><p>Conte o problema. Desenhamos o caminho técnico.</p></div><a class="btn btn-invert" href="../contato.html">Falar com a SENNA</a></div></section>`;
+  }catch(e){
+    root.innerHTML='<p class="label-mono">Indisponível</p><h1 class="display-lg">Este case não está publicado</h1><p style="margin-top:1.5rem"><a class="btn btn-primary" href="../portfolio.html">Portfólio</a></p>';
+  }
+})();
+</script>
+</body></html>
