@@ -26,7 +26,7 @@ async function login(req, res, next) {
     res.cookie('aurelia_session', result.token, {
       httpOnly: true,
       secure: isProd,
-      sameSite: 'lax',
+      sameSite: isProd ? 'none' : 'lax',
       maxAge: 7 * 24 * 60 * 60 * 1000,
       path: '/',
     });
@@ -48,7 +48,7 @@ async function logout(req, res, next) {
     res.clearCookie('aurelia_session', {
       httpOnly: true,
       secure: isProd,
-      sameSite: 'lax',
+      sameSite: isProd ? 'none' : 'lax',
       path: '/',
     });
     res.json({ message: 'Logout realizado.' });
