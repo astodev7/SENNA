@@ -1,7 +1,6 @@
 'use strict';
 
 const express = require('express');
-const path = require('path');
 const helmet = require('helmet');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
@@ -62,28 +61,6 @@ app.use('/api', globalLimiter);
 
 app.use('/api', publicRoutes);
 app.use('/api/admin', adminRoutes);
-
-// Serve frontend
-const frontendPath = path.resolve(__dirname, '../../frontend');
-app.use(
-  express.static(frontendPath, {
-    maxAge: isProd ? '1d' : 0,
-    etag: true,
-  })
-);
-
-// SPA-like fallback for admin and project pages
-app.get('/admin/*', (req, res) => {
-  res.sendFile(path.join(frontendPath, 'admin', 'index.html'), (err) => {
-    if (err) res.status(404).sendFile(path.join(frontendPath, '404.html'));
-  });
-});
-
-app.get('/projetos/:slug', (req, res) => {
-  res.sendFile(path.join(frontendPath, 'projetos', 'case.html'), (err) => {
-    if (err) res.status(404).sendFile(path.join(frontendPath, '404.html'));
-  });
-});
 
 app.use(notFound);
 app.use(errorHandler);

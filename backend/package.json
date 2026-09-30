@@ -1,13 +1,13 @@
 {
-  "name": "aurelia",
+  "name": "senna-backend",
   "version": "1.0.0",
-  "description": "AURELIA — Plataforma web institucional premium + portfólio + admin",
+  "description": "SENNA — Backend da plataforma institucional",
   "private": true,
   "scripts": {
-    "start": "node backend/src/server.js",
-    "dev": "node --watch backend/src/server.js",
-    "migrate": "node backend/src/database/migrate.js",
-    "seed": "node backend/src/database/seed.js",
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate": "node src/database/migrate.js",
+    "seed": "node src/database/seed.js",
     "test": "node --test tests/**/*.test.js",
     "lint": "echo \"No linter configured\""
   },
@@ -21,12 +21,12 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-rate-limit": "^7.5.0",
+    "express-validator": "^7.2.1",
     "helmet": "^8.0.0",
     "joi": "^17.13.3",
-    "pg": "^8.13.1",
-    "uuid": "^11.0.5",
     "morgan": "^1.10.0",
-    "express-validator": "^7.2.1"
+    "pg": "^8.13.1",
+    "uuid": "^11.0.5"
   },
   "devDependencies": {}
 }
