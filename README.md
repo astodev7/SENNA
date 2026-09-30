@@ -18,7 +18,11 @@ Plataforma completa: frontend HTML/CSS/JS, backend Node.js + Express, PostgreSQL
 ## Estrutura
 
 ```
+<<<<<<< HEAD
 SENNA/
+=======
+senna/
+>>>>>>> c28d153 (fix: add backend dependencies)
 ├── frontend/          # Site público + admin
 ├── backend/src/       # API Express
 ├── database/          # Migrations e seeds
