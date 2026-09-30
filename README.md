@@ -1,4 +1,4 @@
-# AURELIA
+# SENNA
 
 **Tecnologia que transforma complexidade em vantagem.**
 
@@ -18,7 +18,7 @@ Plataforma completa: frontend HTML/CSS/JS, backend Node.js + Express, PostgreSQL
 ## Estrutura
 
 ```
-aurelia/
+SENNA/
 ├── frontend/          # Site público + admin
 ├── backend/src/       # API Express
 ├── database/          # Migrations e seeds
